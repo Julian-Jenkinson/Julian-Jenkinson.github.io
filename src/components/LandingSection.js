@@ -1,9 +1,8 @@
 import React from "react";
-import {Heading, Text, VStack, HStack, Button} from "@chakra-ui/react";
+import { useColorModeValue ,Heading, Text, VStack, HStack, Button} from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { useColorModeValue } from "@chakra-ui/react";
 
 //could move this to utilities??
 const handleClick = (anchor) => {
@@ -18,11 +17,6 @@ const handleClick = (anchor) => {
 };
 
 const LandingSection = () => (
-
-  //ssomething like this for button colour
-  //const bgColor = useColorModeValue('white', 'gray.800'); // white for light mode, gray.800 for dark mode
-
-
   
   <FullScreenSection
     id="landing-section"
@@ -31,6 +25,11 @@ const LandingSection = () => (
     isDarkBackground
     bg={useColorModeValue("white", "black")} 
     color={useColorModeValue("black", "white")}
+
+    //const buttonColor = {useColorModeValue('white', 'rgb(196,255,134)')}
+    //const buttonBG = {useColorModeValue('black', 'rgb(196,255,134)')}
+
+
   >
     <VStack>
       <Text fontSize="20px" fontWeight="700">Hi, I'm</Text>
@@ -44,7 +43,18 @@ const LandingSection = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Button bg="rgb(196,255,134)" color="black">Resume</Button>
+        <Button
+          fontWeight= "900" 
+          bg={useColorModeValue('black', 'rgb(196,255,134)')} 
+          color={useColorModeValue('rgb(196,255,134)', 'black')}
+          _hover={{
+            bg: useColorModeValue('gray.700', 'green.300'),
+            color: useColorModeValue('white', 'black'),
+          }}
+          
+          >
+            Resume
+        </Button>
       </a>
       <a
         href="#contactme-section"
@@ -53,14 +63,21 @@ const LandingSection = () => (
           handleClick("contactme");
         }}
       >
-        <Button bg="rgb(196,255,134)" color="black">Hire Me</Button>
+        <Button
+        fontWeight= "900"
+        bg={useColorModeValue('black', 'rgb(196,255,134)')} 
+        color={useColorModeValue('rgb(196,255,134)', 'black')}> 
+          Hire Me
+        </Button>
       </a>
       <a
         href="https://github.com/catc4ke"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Button bg="rgb(196,255,134)" color="black">
+        <Button 
+        bg={useColorModeValue('black', 'rgb(196,255,134)')} 
+        color={useColorModeValue('rgb(196,255,134)', 'black')}>
           <FontAwesomeIcon icon={faGithub} size="2x" />
         </Button>
       </a>

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Text, Box, HStack } from "@chakra-ui/react";
+import { Text, Box, HStack, Button } from "@chakra-ui/react";
 import ThemeToggle from './ThemeToggle';
-//import { useColorModeValue } from "@chakra-ui/react";
+import { useColorModeValue } from "@chakra-ui/react";
 
 
 
@@ -47,7 +47,12 @@ const Header = () => {
               handleClick("landing");
               }}
             >
-              <Text>Julian Jenkinson</Text>
+              <Button
+              fontWeight= "900"
+              bg='none' 
+              color={useColorModeValue('black','rgb(196,255,134)')}>            
+                Julian Jenkinson
+              </Button>
             </a>
               
             </nav>
