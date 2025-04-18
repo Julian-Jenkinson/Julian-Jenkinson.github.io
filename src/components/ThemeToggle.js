@@ -11,6 +11,9 @@ function ThemeToggle() {
       onClick={toggleColorMode}
       variant="ghost"
       size="md"
+      transition="transform 0.1s ease"
+      _hover={{ transform: "scale(1.2)" }}
+      
     />
   );
 }

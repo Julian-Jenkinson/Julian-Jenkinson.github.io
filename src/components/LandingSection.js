@@ -25,17 +25,12 @@ const LandingSection = () => (
     isDarkBackground
     bg={useColorModeValue("white", "black")} 
     color={useColorModeValue("black", "white")}
-
-    //const buttonColor = {useColorModeValue('white', 'rgb(196,255,134)')}
-    //const buttonBG = {useColorModeValue('black', 'rgb(196,255,134)')}
-
-
   >
     <VStack>
-      <Text fontSize="20px" fontWeight="700">Hi, I'm</Text>
+      <Text fontSize="20px" fontWeight="700" color="gray.500">Hi, I'm</Text>
       <Heading fontSize="92px" fontWeight="900">Julian</Heading>
       <Text fontSize="92px" fontWeight="900">Jenkinson</Text>
-      <Text fontSize="25px" fontWeight="600">A Full Stack Web Developer</Text>
+      <Text fontSize="25px" fontWeight="600" color="gray.500">A Full Stack Web Developer</Text>
       <HStack>
 
       <a
@@ -47,11 +42,8 @@ const LandingSection = () => (
           fontWeight= "900" 
           bg={useColorModeValue('black', 'rgb(196,255,134)')} 
           color={useColorModeValue('rgb(196,255,134)', 'black')}
-          _hover={{
-            bg: useColorModeValue('gray.700', 'green.300'),
-            color: useColorModeValue('white', 'black'),
-          }}
-          
+          transition="transform 0.1s ease"
+          _hover={{ transform: "scale(1.1)" }}
           >
             Resume
         </Button>
@@ -66,7 +58,9 @@ const LandingSection = () => (
         <Button
         fontWeight= "900"
         bg={useColorModeValue('black', 'rgb(196,255,134)')} 
-        color={useColorModeValue('rgb(196,255,134)', 'black')}> 
+        color={useColorModeValue('rgb(196,255,134)', 'black')}
+        transition="transform 0.1s ease"
+        _hover={{ transform: "scale(1.1)" }}> 
           Hire Me
         </Button>
       </a>
@@ -77,7 +71,9 @@ const LandingSection = () => (
       >
         <Button 
         bg={useColorModeValue('black', 'rgb(196,255,134)')} 
-        color={useColorModeValue('rgb(196,255,134)', 'black')}>
+        color={useColorModeValue('rgb(196,255,134)', 'black')}
+        transition="transform 0.1s ease"
+        _hover={{ transform: "scale(1.1)" }}>
           <FontAwesomeIcon icon={faGithub} size="2x" />
         </Button>
       </a>

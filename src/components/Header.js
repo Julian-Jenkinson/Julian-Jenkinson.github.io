@@ -50,7 +50,9 @@ const Header = () => {
               <Button
               fontWeight= "900"
               bg='none' 
-              color={useColorModeValue('black','rgb(196,255,134)')}>            
+              color={useColorModeValue('black','rgb(196,255,134)')}
+              transition="transform 0.1s ease"
+              _hover={{ transform: "scale(1.1)" }}>            
                 Julian Jenkinson
               </Button>
             </a>
@@ -59,7 +61,6 @@ const Header = () => {
             <nav>
               <HStack spacing={8}>
                 <ThemeToggle />
-
                   <a
                       href="#landing-section"
                       onClick={(event) => {
