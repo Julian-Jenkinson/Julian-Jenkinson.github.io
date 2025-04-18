@@ -30,6 +30,7 @@ const Card = ({ title, type, description, imageSrc }) => {
     height="40%"
     bgGradient="linear(to-t, blackAlpha.800 10%, rgba(0,0,0,0.6) 50%, transparent 100%)"
     pointerEvents="none"
+    
   />
   <Box
     position="absolute"
