@@ -8,10 +8,12 @@ const projects = [
   {
     title: "Graduate Nurse Job Match",
     type: "Job Platform",
-    description1:
+    description:
       "Handy tool belt to create amazing AR components in a React app, with redux integration via middleware️",
-    description2:
-      "Heres some more infomration about this project",
+    feature1Heading:"Pure CSS",
+    feature1Description:"Plenty of CSS here!",
+    feature2Heading:"?",
+    feature2Description:"?",
     getImageSrc: () => require("../images/project1.1.png"),
     stack: ['PHP', 'HTML', 'CSS', 'JS'],
     repo: "https://github.com/catc4ke/lume",
@@ -22,10 +24,12 @@ const projects = [
   {
     title: "Lume Web Design",
     type: "Static Web Site",
-    description1:
+    description:
       "A scrollable bottom sheet with virtualisation support, native animations at 60 FPS and fully implemented in JS land 🔥️",
-    description2:
-      "Heres some more infomration about this project",
+    feature1Heading:"Pure CSS",
+    feature1Description:"Lots of CSS here!",
+    feature2Heading:"?",
+    feature2Description:"?",
     getImageSrc: () => require("../images/project2.webp"),
     stack: ['PHP', 'HTML', 'CSS', 'JS'],
     repo: "https://github.com/catc4ke/lume",
@@ -35,12 +39,14 @@ const projects = [
   {
     title: "My Portfolio",
     type: "Portfolio",
-    description1:
-      "A One-stop shop for photographers to share and monetize their photos, allowing them to have a second source of income",
-    description2:
-      "Heres some more infomration about this project",
+    description:
+      "My personal porfolio website built in React and styled with Chakra UI  ",
+    feature1Heading:"?",
+    feature1Description:"?",
+    feature2Heading:"?",
+    feature2Description:"?",  
     getImageSrc: () => require("../images/project3.png"),
-    stack: ['React', 'HTML', 'CSS', 'JS', 'Chakra UI'],
+    stack: ['React JS', 'HTML', 'CSS', 'JS', 'Chakra UI'],
     repo: "https://github.com/catc4ke/lume",
     url: "https://lumewebdesign.com.au",
 
@@ -70,8 +76,11 @@ const ProjectsSection = () => {
             key={project.title}
             title={project.title}
             type={project.type}
-            description1={project.description1}
-            description2={project.description2}
+            description={project.description}
+            feature1Heading={project.feature1Heading}
+            feature1Description={project.feature1Description}
+            feature2Heading={project.feature2Heading}
+            feature2Description={project.feature2Description}
             imageSrc={project.getImageSrc()}
             stack={project.stack}
             repo={project.repo}

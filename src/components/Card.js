@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 import { useColorModeValue } from "@chakra-ui/react";
 import { CloseIcon } from "@chakra-ui/icons";
 
-const Card = ({ title, type, description1, description2, imageSrc, stack, repo, url, }) => {
+const Card = ({ title, type, description, feature1Heading, feature1Description, feature2Heading, feature2Description, imageSrc, stack, repo, url, }) => {
   const [showPopout, setShowPopout] = useState(false);
 
   // Disable background scrolling when popout is open
@@ -167,7 +167,7 @@ const Card = ({ title, type, description1, description2, imageSrc, stack, repo, 
                 </Box>
               ))}
             </HStack>
-            <Text mb={4} fontSize="16px">{description1}</Text>
+            <Text mb={4} fontSize="16px">{description}</Text>
             <HStack mb={6}>
               <a
                 href={repo}
@@ -200,7 +200,8 @@ const Card = ({ title, type, description1, description2, imageSrc, stack, repo, 
               </Button>
             </a >
             </HStack>
-            <Text mb={4} fontSize="16px">{description2}</Text>
+            <Heading><Text mb={4} fontFamily="body" fontSize="28px">{feature1Heading}</Text></Heading>
+            <Text mb={4} fontSize="16px">{feature1Description}</Text>
             <Box
             display="grid"
             placeItems="center"
