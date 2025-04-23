@@ -8,29 +8,41 @@ const projects = [
   {
     title: "Graduate Nurse Job Match",
     type: "Job Platform",
-    description:
+    description1:
       "Handy tool belt to create amazing AR components in a React app, with redux integration via middleware️",
+    description2:
+      "Heres some more infomration about this project",
     getImageSrc: () => require("../images/project1.1.png"),
     stack: ['PHP', 'HTML', 'CSS', 'JS'],
+    repo: "https://github.com/catc4ke/lume",
+    url: "https://lumewebdesign.com.au",
 
   },
   
   {
     title: "Lume Web Design",
     type: "Static Web Site",
-    description:
+    description1:
       "A scrollable bottom sheet with virtualisation support, native animations at 60 FPS and fully implemented in JS land 🔥️",
+    description2:
+      "Heres some more infomration about this project",
     getImageSrc: () => require("../images/project2.webp"),
     stack: ['PHP', 'HTML', 'CSS', 'JS'],
+    repo: "https://github.com/catc4ke/lume",
+    url: "https://lumewebdesign.com.au",
 
   },
   {
     title: "My Portfolio",
     type: "Portfolio",
-    description:
+    description1:
       "A One-stop shop for photographers to share and monetize their photos, allowing them to have a second source of income",
+    description2:
+      "Heres some more infomration about this project",
     getImageSrc: () => require("../images/project3.png"),
-    stack: ['PHP', 'HTML', 'CSS', 'JS'],
+    stack: ['React', 'HTML', 'CSS', 'JS', 'Chakra UI'],
+    repo: "https://github.com/catc4ke/lume",
+    url: "https://lumewebdesign.com.au",
 
   },
 ];
@@ -58,9 +70,12 @@ const ProjectsSection = () => {
             key={project.title}
             title={project.title}
             type={project.type}
-            description={project.description}
+            description1={project.description1}
+            description2={project.description2}
             imageSrc={project.getImageSrc()}
             stack={project.stack}
+            repo={project.repo}
+            url={project.url}
           />
         ))}
       </Stack>

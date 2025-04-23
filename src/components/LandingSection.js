@@ -55,7 +55,7 @@ const LandingSection = () => (
           handleClick("contactme");
         }}
       >
-        <Button
+      <Button
         fontWeight= "900"
         bg={useColorModeValue('black', 'rgb(196,255,134)')} 
         color={useColorModeValue('rgb(196,255,134)', 'black')}
@@ -69,7 +69,7 @@ const LandingSection = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Button 
+      <Button 
         bg={useColorModeValue('black', 'rgb(196,255,134)')} 
         color={useColorModeValue('rgb(196,255,134)', 'black')}
         transition="transform 0.1s ease"
