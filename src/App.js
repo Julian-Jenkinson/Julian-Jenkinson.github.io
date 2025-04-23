@@ -2,6 +2,7 @@
 import { ChakraProvider, ColorModeScript, extendTheme } from "@chakra-ui/react";
 import Header from "./components/Header";
 import LandingSection from "./components/LandingSection";
+import SkillsSection from "./components/Skills";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactMeSection from "./components/ContactMeSection";
 import Footer from "./components/Footer";
@@ -18,6 +19,7 @@ function App() {
         <main>
           <Header />
           <LandingSection />
+          <SkillsSection />
           <ProjectsSection />
           <ContactMeSection />
           <Footer />

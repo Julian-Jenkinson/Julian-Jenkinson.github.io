@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Text, Box, HStack, Button } from "@chakra-ui/react";
 import ThemeToggle from './ThemeToggle';
 import { useColorModeValue } from "@chakra-ui/react";
+import HeaderMenu from "./HeaderMenu";
 
 
 
@@ -61,14 +62,24 @@ const Header = () => {
             <nav>
               <HStack spacing={8}>
                 <ThemeToggle />
+                <HeaderMenu />
                   <a
                       href="#landing-section"
                       onClick={(event) => {
                         event.preventDefault();
                         handleClick("landing");
                       }}
-                    >
+                  >
                     Home
+                  </a>
+                  <a
+                      href="#skills-section"
+                      onClick={(event) => {
+                        event.preventDefault();
+                        handleClick("skills");
+                      }}
+                  >
+                    Skills
                   </a>
                   <a
                     href="#projects-section"
