@@ -6,45 +6,45 @@ import { useColorModeValue } from "@chakra-ui/react";
 
 const projects = [
   {
-    title: "Graduate Nurse Job Match",
+    title: "Graduate Nurse Job Match (2024)",
     type: "Job Platform",
     description:
       "Handy tool belt to create amazing AR components in a React app, with redux integration via middleware️",
     feature1Heading:"Pure CSS",
     feature1Description:"Plenty of CSS here!",
-    feature2Heading:"?",
-    feature2Description:"?",
+    feature2Heading:"a Heading",
+    feature2Description:"A description of something",
     getImageSrc: () => require("../images/project1.1.png"),
-    stack: ['PHP', 'HTML', 'CSS', 'JS'],
+    stack: ['PHP', 'HTML', 'CSS', 'JS', "SQL", "AWS", "Apache"],
     repo: "https://github.com/catc4ke/lume",
-    url: "https://lumewebdesign.com.au",
+    //url: "https://lumewebdesign.com.au",
 
   },
   
   {
-    title: "Lume Web Design",
+    title: "Lume Web Design (2025)",
     type: "Static Web Site",
     description:
       "A scrollable bottom sheet with virtualisation support, native animations at 60 FPS and fully implemented in JS land 🔥️",
     feature1Heading:"Pure CSS",
     feature1Description:"Lots of CSS here!",
-    feature2Heading:"?",
-    feature2Description:"?",
+    feature2Heading:"Heading",
+    feature2Description:"A description of something",
     getImageSrc: () => require("../images/project2.webp"),
-    stack: ['PHP', 'HTML', 'CSS', 'JS'],
+    stack: ['HTML', 'CSS', 'JS', 'Netlify'],
     repo: "https://github.com/catc4ke/lume",
     url: "https://lumewebdesign.com.au",
 
   },
   {
-    title: "My Portfolio",
+    title: "My Portfolio (2025)",
     type: "Portfolio",
     description:
       "My personal porfolio website built in React and styled with Chakra UI  ",
-    feature1Heading:"?",
-    feature1Description:"?",
-    feature2Heading:"?",
-    feature2Description:"?",  
+    feature1Heading:"A Heading",
+    feature1Description:"A description of something",
+    feature2Heading:"A Heading",
+    feature2Description:"A description of something",  
     getImageSrc: () => require("../images/project3.png"),
     stack: ['React JS', 'HTML', 'CSS', 'JS', 'Chakra UI'],
     repo: "https://github.com/catc4ke/lume",

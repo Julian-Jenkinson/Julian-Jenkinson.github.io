@@ -24,6 +24,12 @@ const Card = ({ title, type, description, feature1Heading, feature1Description, 
   const togglePopout = () => {
     setShowPopout(!showPopout);
   };
+  //implement this still
+  const color = useColorModeValue("gray.700", "gray.300");
+  const borderColor = useColorModeValue("gray.700", "gray.300");
+  const cardBg = useColorModeValue("gray.100", "gray.900");
+  const githubBg = useColorModeValue('black', 'rgb(196,255,134)');
+  const githubColor = useColorModeValue('rgb(196,255,134)', 'black');
 
   return (
     <>
@@ -62,9 +68,17 @@ const Card = ({ title, type, description, feature1Heading, feature1Description, 
             color="white"
             pointerEvents="none"
           >
-            <Heading fontSize="18px">{title}</Heading>
-            <Text>
-              {type} <FontAwesomeIcon icon={faArrowRight} size="1x" />
+            <Heading 
+              textAlign="left" 
+              fontSize="22px"
+            >
+              {title}
+            </Heading>
+            <Text
+              textAlign="left"
+              fontSize="18px"
+            >
+              {type}
             </Text>
           </Box>
         </Box>
@@ -79,10 +93,10 @@ const Card = ({ title, type, description, feature1Heading, feature1Description, 
             fontSize="sm"
             fontFamily='monospace'
             fontWeight="bold"
-            color={useColorModeValue("gray.700", "gray.300")}
+            color={useColorModeValue("gray.700", "gray.400")}
             borderRadius="full"
             border="2px"
-            borderColor={useColorModeValue("gray.700", "gray.300")}
+            borderColor={useColorModeValue("gray.700", "gray.400")}
           >
             {tech}
           </Box>
@@ -200,7 +214,7 @@ const Card = ({ title, type, description, feature1Heading, feature1Description, 
               </Button>
             </a >
             </HStack>
-            <Heading><Text mb={4} fontFamily="body" fontSize="28px">{feature1Heading}</Text></Heading>
+            <Heading><Text mb={2} fontFamily="body" fontSize="24px">{feature1Heading}</Text></Heading>
             <Text mb={4} fontSize="16px">{feature1Description}</Text>
             <Box
             display="grid"
@@ -217,6 +231,8 @@ const Card = ({ title, type, description, feature1Heading, feature1Description, 
                 borderRadius="lg"
               />
             </Box>
+            <Heading><Text mt={4} mb={2} fontFamily="body" fontSize="24px">{feature2Heading}</Text></Heading>
+            <Text mb={4} fontSize="16px">{feature2Description}</Text>
             
           </Box>
         </Box>
