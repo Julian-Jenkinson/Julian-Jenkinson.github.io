@@ -65,7 +65,7 @@ const LandingSection = () => (
         </Button>
       </a>
       <a
-        href="https://github.com/catc4ke"
+        href="https://github.com/julian-jenkinson"
         target="_blank"
         rel="noopener noreferrer"
       >

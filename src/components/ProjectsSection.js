@@ -16,7 +16,7 @@ const projects = [
     feature2Description:"A description of something",
     getImageSrc: () => require("../images/project1.1.png"),
     stack: ['PHP', 'HTML', 'CSS', 'JS', "SQL", "AWS", "Apache"],
-    repo: "https://github.com/catc4ke/lume",
+    repo: "https://github.com/julian-jenkinson/Graduate_Nurse_Job_Match",
     //url: "https://lumewebdesign.com.au",
 
   },
@@ -32,7 +32,7 @@ const projects = [
     feature2Description:"A description of something",
     getImageSrc: () => require("../images/project2.webp"),
     stack: ['HTML', 'CSS', 'JS', 'Netlify'],
-    repo: "https://github.com/catc4ke/lume",
+    repo: "https://github.com/julian-jenkinson/Lume_Web_Design",
     url: "https://lumewebdesign.com.au",
 
   },
@@ -47,8 +47,8 @@ const projects = [
     feature2Description:"A description of something",  
     getImageSrc: () => require("../images/project3.png"),
     stack: ['React JS', 'HTML', 'CSS', 'JS', 'Chakra UI'],
-    repo: "https://github.com/catc4ke/lume",
-    url: "https://lumewebdesign.com.au",
+    repo: "https://github.com/julian-jenkinson/Julian-Jenkinson.github.io",
+    url: "https://julian-jenkinson.github.io",
 
   },
 ];
