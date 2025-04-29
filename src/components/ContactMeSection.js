@@ -1,127 +1,124 @@
-import React, {useEffect} from "react";
+import React from "react";
 import { useFormik } from "formik";
-import {
-  Box,
-  Button,
-  FormControl,
-  FormErrorMessage,
-  FormLabel,
-  Heading,
-  Input,
-  Select,
-  Textarea,
-  VStack,
-} from "@chakra-ui/react";
-import * as Yup from 'yup';
+import { Box, Button, FormControl, FormErrorMessage, FormLabel, Heading, Input, Select, Textarea, VStack,} from "@chakra-ui/react";
+import * as Yup from "yup";
 import FullScreenSection from "./FullScreenSection";
 import { useColorModeValue } from "@chakra-ui/react";
 
-const LandingSection = () => {
-//add loading sign to prevent double submit
+const ContactMeSection = () => {
   const formik = useFormik({
     initialValues: {
       firstName: "",
       email: "",
-      type: "hireMe",
+      type: "let's work together",
       comment: "",
     },
-    //onSubmit: async (values) => {
 
-    //  const URL = "https://url.com/submit"; // Placeholder URL
-    //  await submit(URL, values); // Pass the fake URL and form values to submit
-    //},
     validationSchema: Yup.object({
-
-      firstName: Yup.string()
-        .required('Required'),
+      firstName: Yup.string().required("Who are you?!"),
       email: Yup.string()
-        .email('Invalid email address')
-        .required('Required'),
-      type: Yup.string()
-        .optional(),
+        .email("Please enter a valid email address")
+        .required("Required"),
+      type: Yup.string().optional(),
       comment: Yup.string()
-        .required('Required')
-        .min(25, 'Must be at least 25 characters'),
-  
+        .required("Required")
+        .min(5, "At least submit more than a few letters!"),
     }),
-    
+
+    onSubmit: async (values, { resetForm, setSubmitting }) => {
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            access_key: "340f0837-f591-4969-b6df-01f3119ace87",  // Public key
+            name: values.firstName,
+            email: values.email,
+            enquiryType: values.type,
+            message: values.comment,
+          }),
+        });
+
+        const result = await response.json();
+        if (result.success) {
+          alert("Thanks for contacting me. I'll be in touch soon!");
+          resetForm();
+        } else {
+          alert("Something went wrong. Please try again later.");
+        }
+      } catch (error) {
+        console.error(error);
+        alert("Error submitting the form.");
+      } finally {
+        setSubmitting(false);
+      }
+    },
   });
-/*
-  useEffect(() => {
-    if (response) {
-      console.log("Response:", response); // Log the response to inspect its structure
-    }
-    if (response?.type === 'success') {
-      onOpen(response.type, response.message);
-      formik.resetForm();
-    } else if (response?.type === 'error') {
-      onOpen(response.type, response.message);
-    }
-  }, [response]);
-*/
+
   return (
     <FullScreenSection
-    id="contactme-section"
+      id="contactme-section"
       isDarkBackground
       py={10}
       spacing={8}
-      bg={useColorModeValue("white", "black")} 
+      bg={useColorModeValue("white", "black")}
       color={useColorModeValue("black", "white")}
     >
-      <VStack w="1024px" px={32} alignItems="flex-start">
-        <Heading as="h1">
-          Contact me
-        </Heading>
+      <VStack w="1000px" px={32} alignItems="flex-start">
+        <Heading as="h1">Contact me</Heading>
         <Box p={6} rounded="md" w="100%">
-          <form /*onSubmit={formik.handleSubmit}*/>
+          <form onSubmit={formik.handleSubmit}>
             <VStack spacing={4}>
               <FormControl isInvalid={formik.touched.firstName && !!formik.errors.firstName}>
                 <FormLabel htmlFor="firstName">Name</FormLabel>
                 <Input
                   id="firstName"
                   name="firstName"
-                  {...formik.getFieldProps('firstName')}
+                  {...formik.getFieldProps("firstName")}
                 />
                 <FormErrorMessage>{formik.errors.firstName}</FormErrorMessage>
               </FormControl>
+
               <FormControl isInvalid={formik.touched.email && !!formik.errors.email}>
                 <FormLabel htmlFor="email">Email Address</FormLabel>
                 <Input
                   id="email"
                   name="email"
                   type="email"
-                  {...formik.getFieldProps('email')}
+                  {...formik.getFieldProps("email")}
                 />
                 <FormErrorMessage>{formik.errors.email}</FormErrorMessage>
               </FormControl>
+
               <FormControl>
                 <FormLabel htmlFor="type">Type of enquiry</FormLabel>
                 <Select id="type" name="type" {...formik.getFieldProps("type")}>
-                  <option value="hireMe">Freelance project proposal</option>
-                  <option value="openSource">
-                    Open source consultancy session
-                  </option>
+                  <option value="let's work together">Let's work together!</option>
                   <option value="other">Other</option>
                 </Select>
               </FormControl>
+
               <FormControl isInvalid={formik.touched.comment && !!formik.errors.comment}>
                 <FormLabel htmlFor="comment">Your message</FormLabel>
                 <Textarea
                   id="comment"
                   name="comment"
-                  {...formik.getFieldProps('comment')}
+                  {...formik.getFieldProps("comment")}
                   height={250}
                 />
                 <FormErrorMessage>{formik.errors.comment}</FormErrorMessage>
               </FormControl>
+
               <Button
                 type="submit"
                 width="full"
-                bg="rgb(196,255,134)" 
+                bg="rgb(196,255,134)"
                 color="black"
-                //isLoading={isLoading}
-                //isDisabled={isLoading}
-                >
+                isLoading={formik.isSubmitting}
+                isDisabled={formik.isSubmitting}
+              >
                 Submit
               </Button>
             </VStack>
@@ -132,4 +129,4 @@ const LandingSection = () => {
   );
 };
 
-export default LandingSection;
+export default ContactMeSection;

@@ -1,7 +1,7 @@
 import React from "react";
 import FullScreenSection from "./FullScreenSection";
-import { Box, Heading, Stack } from "@chakra-ui/react";
-import Card from "./Card";
+import { Heading, Stack } from "@chakra-ui/react";
+import ProjectCard from "./ProjectCard";
 import { useColorModeValue } from "@chakra-ui/react";
 
 const projects = [
@@ -12,9 +12,14 @@ const projects = [
       "Handy tool belt to create amazing AR components in a React app, with redux integration via middleware️",
     feature1Heading:"Pure CSS",
     feature1Description:"Plenty of CSS here!",
-    feature2Heading:"a Heading",
-    feature2Description:"A description of something",
-    getImageSrc: () => require("../images/project1.1.png"),
+    feature2Heading:"Heading 2",
+    feature2Description:"2nd description of something",
+    feature3Heading:"Heading 3",
+    feature3Description:"3rd description of something",
+    summary:"This is a summary of this project",
+    getImage1Src: () => require("../images/project1.1.png"),
+    getImage2Src: () => require("../images/project1.1.png"),
+    getImage3Src: () => require("../images/project1.1.png"),
     stack: ['PHP', 'HTML', 'CSS', 'JS', "SQL", "AWS", "Apache"],
     repo: "https://github.com/julian-jenkinson/Graduate_Nurse_Job_Match",
     //url: "https://lumewebdesign.com.au",
@@ -28,10 +33,15 @@ const projects = [
       "A scrollable bottom sheet with virtualisation support, native animations at 60 FPS and fully implemented in JS land 🔥️",
     feature1Heading:"Pure CSS",
     feature1Description:"Lots of CSS here!",
-    feature2Heading:"Heading",
-    feature2Description:"A description of something",
-    getImageSrc: () => require("../images/project2.webp"),
-    stack: ['HTML', 'CSS', 'JS', 'Netlify'],
+    feature2Heading:"Heading 2",
+    feature2Description:"2nd description of something",
+    feature3Heading:"Heading 3",
+    feature3Description:"3rd description of something",
+    summary:"This is a summary of this project",
+    getImage1Src: () => require("../images/project2.webp"),
+    getImage2Src: () => require("../images/project2.webp"),
+    getImage3Src: () => require("../images/project2.webp"),
+    stack: ['HTML', 'CSS', 'LESS', 'JS', 'Netlify'],
     repo: "https://github.com/julian-jenkinson/Lume_Web_Design",
     url: "https://lumewebdesign.com.au",
 
@@ -41,11 +51,16 @@ const projects = [
     type: "Portfolio",
     description:
       "My personal porfolio website built in React and styled with Chakra UI  ",
-    feature1Heading:"A Heading",
-    feature1Description:"A description of something",
-    feature2Heading:"A Heading",
-    feature2Description:"A description of something",  
-    getImageSrc: () => require("../images/project3.png"),
+    feature1Heading:"Heading 1",
+    feature1Description:"1st description of something",
+    feature2Heading:"Heading 2",
+    feature2Description:"2nd description of something",
+    feature3Heading:"Heading 3",
+    feature3Description:"3rd description of something",
+    summary:"This is a summary of this project",    
+    getImage1Src: () => require("../images/project3.png"),
+    getImage2Src: () => require("../images/project3.png"),
+    getImage3Src: () => require("../images/project3.png"),
     stack: ['React JS', 'HTML', 'CSS', 'JS', 'Chakra UI'],
     repo: "https://github.com/julian-jenkinson/Julian-Jenkinson.github.io",
     url: "https://julian-jenkinson.github.io",
@@ -72,7 +87,7 @@ const ProjectsSection = () => {
         spacing={8}
       >
         {projects.map((project) => (
-          <Card
+          <ProjectCard
             key={project.title}
             title={project.title}
             type={project.type}
@@ -81,7 +96,12 @@ const ProjectsSection = () => {
             feature1Description={project.feature1Description}
             feature2Heading={project.feature2Heading}
             feature2Description={project.feature2Description}
-            imageSrc={project.getImageSrc()}
+            feature3Heading={project.feature3Heading}
+            feature3Description={project.feature3Description}
+            summary={project.summary}
+            image1Src={project.getImage1Src()}
+            image2Src={project.getImage2Src()}
+            image3Src={project.getImage3Src()}
             stack={project.stack}
             repo={project.repo}
             url={project.url}
