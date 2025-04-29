@@ -73,26 +73,29 @@ const Card = ({ title, type, description, feature1Heading, feature1Description, 
             </Text>
           </Box>
         </Box>
+
+        {/* Tech stack */}
+        <HStack spacing={2} mt={2}>
+          {stack.map((tech) => (
+            <Box
+              key={tech}
+              px={2}
+              py={1}
+              fontSize="sm"
+              fontFamily='monospace'
+              fontWeight="bold"
+              color={useColorModeValue("gray.700", "gray.400")}
+              borderRadius="full"
+              border="2px"
+              borderColor={useColorModeValue("gray.700", "gray.400")}
+            >
+              {tech}
+            </Box>
+          ))}
+        </HStack>
+      
       </button>
-      {/* Tech stack */}
-      <HStack spacing={2} mt={2}>
-        {stack.map((tech) => (
-          <Box
-            key={tech}
-            px={2}
-            py={1}
-            fontSize="sm"
-            fontFamily='monospace'
-            fontWeight="bold"
-            color={useColorModeValue("gray.700", "gray.400")}
-            borderRadius="full"
-            border="2px"
-            borderColor={useColorModeValue("gray.700", "gray.400")}
-          >
-            {tech}
-          </Box>
-        ))}
-      </HStack>
+      
 
       {showPopout && (
   <ProjectPopout

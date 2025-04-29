@@ -63,42 +63,6 @@ const Header = () => {
               <HStack spacing={8}>
                 <ThemeToggle />
                 <HeaderMenu />
-                  <a
-                      href="#landing-section"
-                      onClick={(event) => {
-                        event.preventDefault();
-                        handleClick("landing");
-                      }}
-                  >
-                    Home
-                  </a>
-                  <a
-                      href="#skills-section"
-                      onClick={(event) => {
-                        event.preventDefault();
-                        handleClick("skills");
-                      }}
-                  >
-                    Skills
-                  </a>
-                  <a
-                    href="#projects-section"
-                    onClick={(event) => {
-                      event.preventDefault();
-                      handleClick("projects");
-                    }}
-                  >
-                  Projects
-                </a>
-                <a
-                  href="#contactme-section"
-                  onClick={(event) => {
-                    event.preventDefault();
-                    handleClick("contactme");
-                  }}
-                >
-                Contact
-                </a>
               </HStack>
             </nav>
           </HStack>

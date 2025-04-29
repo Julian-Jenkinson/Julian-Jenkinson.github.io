@@ -1,6 +1,6 @@
 import React from "react";
 import FullScreenSection from "./FullScreenSection";
-import { Heading, Stack } from "@chakra-ui/react";
+import { Heading, SimpleGrid } from "@chakra-ui/react";
 import ProjectCard from "./ProjectCard";
 import { useColorModeValue } from "@chakra-ui/react";
 
@@ -83,9 +83,8 @@ const ProjectsSection = () => {
       <Heading as="h1">
         Projects
       </Heading>
-      <Stack
-        spacing={8}
-      >
+      
+      <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={8}>
         {projects.map((project) => (
           <ProjectCard
             key={project.title}
@@ -107,7 +106,7 @@ const ProjectsSection = () => {
             url={project.url}
           />
         ))}
-      </Stack>
+      </SimpleGrid>
     </FullScreenSection>
   );
 };
