@@ -87,7 +87,7 @@ const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1
             ))}
           </HStack>
 
-          <Text mb={4} fontSize="20px">{description}</Text>
+          <Text mb={4} fontSize="18px">{description}</Text>
 
           <HStack spacing={3} mb={8}>
             <a href={repo} target="_blank" rel="noopener noreferrer">
@@ -151,6 +151,7 @@ const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1
             <Text mt={8} mb={2} fontFamily="body" fontSize="26px" fontWeight="900">{feature3Heading}</Text>
           </Heading>
           <Text mb={4} fontSize="16px">{feature3Description}</Text>
+          {image3Src && (
           <Box display="grid" placeItems="center" width="100%" height="auto">
             <Image
               src={image3Src}
@@ -158,8 +159,9 @@ const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1
               objectFit="cover"
               height="auto"
               borderRadius="lg"
-            />
+            />  
           </Box>
+          )}
           <Text mt={8} fontSize="16px">{summary}</Text>
         </Box>
       </Box>
