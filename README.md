@@ -8,13 +8,19 @@ A short description and goal for the project
 - **feature 4** - some information
 
 ## Technology ✨ 
-**Frontend** - some information
+**Frontend** - React, HTML, CSS, JS, Chakra UI, FormIK
 
-**Backend** - some information
+**Ops** - Github
+
 
 ## Deployment 💫
 some text about netlify - CICD
 
+npm run deploy
+
 ## How to use this project ⭐
 use it like this - view locally
+
+npm install
+npm start
 

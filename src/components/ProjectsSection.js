@@ -59,7 +59,7 @@ const projects = [
     getImage1Src: () => require("../images/project3.1.png"),
     getImage2Src: () => require("../images/project3.1.png"),
     getImage3Src: () => require("../images/project3.1.png"),
-    stack: ['React JS', 'HTML', 'CSS', 'JS', 'Chakra UI'],
+    stack: ['React JS', 'HTML', 'CSS', 'JS', 'Chakra UI', 'Formik'],
     repo: "https://github.com/julian-jenkinson/Julian-Jenkinson.github.io",
     url: "https://julian-jenkinson.github.io",
 
