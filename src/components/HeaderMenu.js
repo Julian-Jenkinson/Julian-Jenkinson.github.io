@@ -17,7 +17,14 @@ import { Menu, MenuButton, MenuList, MenuItem, Button } from "@chakra-ui/react";
 
     return (
       <Menu>
-        <MenuButton as={Button} rightIcon={<HamburgerIcon />}>
+        <MenuButton 
+          as={Button}
+          sx={{ marginLeft: '0 !important' }}
+          bg="none"
+          transition="transform 0.1s ease"
+          _hover={{ transform: "scale(1.2)" }}
+        >
+          <HamburgerIcon w={6} h={6} />
         </MenuButton>
         <MenuList>
           <MenuItem

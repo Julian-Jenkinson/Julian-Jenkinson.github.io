@@ -10,7 +10,7 @@ function ThemeToggle() {
       icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
       onClick={toggleColorMode}
       variant="ghost"
-      size="md"
+      size="lg"
       transition="transform 0.1s ease"
       _hover={{ transform: "scale(1.2)" }}
       
