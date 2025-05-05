@@ -73,7 +73,8 @@ const ProjectsSection = () => {
       id="projects-section"
       isDarkBackground
       //p={0}
-      alignItems="flex-start"
+      alignItems="flex-center"
+      margin="auto"
       spacing={8}
       bg={useColorModeValue("white", "black")} 
       color={useColorModeValue("black", "white")}

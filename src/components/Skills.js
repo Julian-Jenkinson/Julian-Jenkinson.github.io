@@ -7,35 +7,33 @@ import { FaAws, FaDatabase, FaGithub, FaLess, FaPhp } from "react-icons/fa";
 import { SiCplusplus } from "react-icons/si";
 import SkillGrid from "./SkillGrid";
 
-
-
 const SkillsSection = () => {
-  const ColourTheme = ["red.400", "yellow.400"];
+  //implement colour theme?
   const TechList = [
     {
       tech: "HTML5",
       icon: <DiHtml5 />,
-      bgColor: "red.400",
+      bgColor: "#7661C2",
     },
     {
       tech: "CSS3",
       icon: <DiCss3/>,
-      bgColor: "orange.400",
+      bgColor: "#5F8AAC",
     },
     {
       tech: "LESS",
       icon: <FaLess />,
-      bgColor: "yellow.400",
+      bgColor: "#37A8A0",
     },
     {
       tech: "SASS",
       icon: <DiSass />,
-      bgColor: "green.400",
+      bgColor: "#D4904F",
     },
     {
       tech: "JavaScript",
       icon: <DiJavascript1 />,
-      bgColor: "blue.400",
+      bgColor: "#D56B70",
     },
     {
       tech: "React.JS",
@@ -45,7 +43,7 @@ const SkillsSection = () => {
     {
       tech: "JQuery",
       icon: <DiJqueryLogo />,
-      bgColor: "pink.400",
+      bgColor: "#37A8A0",
     },
     {
       tech: "PHP",
@@ -65,7 +63,7 @@ const SkillsSection = () => {
     {
       tech: "C++",
       icon: <SiCplusplus />,
-      bgColor: "green.400",
+      bgColor: "#37A8A0",
     },
     {
       tech: "AWS",
@@ -84,7 +82,8 @@ const SkillsSection = () => {
       id="skills-section"
       isDarkBackground
       pt={10}
-      alignItems="flex-start"
+      alignItems="flex-center"
+      margin="auto"
       spacing={8}
       bg={useColorModeValue("white", "black")} 
       color={useColorModeValue("black", "white")}

@@ -41,6 +41,8 @@ const Card = ({ title, type, description, feature1Heading, feature1Description, 
             transition="transform 0.3s ease"
             _hover={{ transform: "scale(1.03)" }}
           />
+
+          
           <Box
             position="absolute"
             bottom="0"
