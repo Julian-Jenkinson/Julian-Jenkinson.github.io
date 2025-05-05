@@ -78,7 +78,15 @@ const ProjectsSection = () => {
       bg={useColorModeValue("white", "black")} 
       color={useColorModeValue("black", "white")}
     >
-      <Heading as="h1">
+      <Heading
+        as="h1"
+        textAlign="center"
+        w="100%"
+        fontWeight="900"
+        fontSize="50"
+        pb=".3em"
+
+      >
         Projects
       </Heading>
       

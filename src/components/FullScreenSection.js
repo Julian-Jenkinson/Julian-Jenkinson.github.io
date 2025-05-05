@@ -1,8 +1,9 @@
 import * as React from "react";
-import { VStack } from "@chakra-ui/react";
+import { Box, VStack } from "@chakra-ui/react";
 
 const FullScreenSection = ({ children, isDarkBackground, ...boxProps }) => {
   return (
+    
     <VStack
       color={isDarkBackground ? "white" : "black"}
       {...boxProps}//handles dark theme toggle
@@ -11,6 +12,7 @@ const FullScreenSection = ({ children, isDarkBackground, ...boxProps }) => {
         {children}
       </VStack>
     </VStack>
+    
   );
 };
 

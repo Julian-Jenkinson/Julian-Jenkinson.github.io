@@ -67,7 +67,16 @@ const ContactMeSection = () => {
       color={useColorModeValue("black", "white")}
     >
       <VStack w="1000px" px={32} alignItems="flex-start">
-        <Heading as="h1">Contact me</Heading>
+        <Heading 
+          as="h1"
+          textAlign="center"
+          w="100%"
+          fontWeight="900"
+          fontSize="50"
+          pb=".3em"
+        >
+          Contact
+        </Heading>
         <Box p={6} rounded="md" w="100%">
           <form onSubmit={formik.handleSubmit}>
             <VStack spacing={4}>
