@@ -2,7 +2,7 @@ import React from "react";
 import FullScreenSection from "./FullScreenSection";
 import { Heading} from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/react";
-import { DiHtml5, DiCss3, DiReact, DiJavascript1, DiLess, DiSass, DiMysql, DiPhp, DiJqueryLogo, DiJqueryUiLogo, DiPython, DiAws, DiGit, DiGithub, DiGithubAlt, DiGithubBadge, DiGithubFull } from "react-icons/di";
+import { DiHtml5, DiCss3, DiReact, DiJavascript1, DiLess, DiSass, DiMysql, DiPhp, DiJqueryLogo, DiJqueryUiLogo, DiPython, DiAws, DiGit, DiGithub, DiGithubAlt, DiGithubBadge, DiGithubFull, DiMongodb, DiDatabase } from "react-icons/di";
 import { FaAws, FaDatabase, FaGithub, FaLess, FaPhp } from "react-icons/fa";
 import { SiCplusplus } from "react-icons/si";
 import SkillGrid from "./SkillGrid";
@@ -46,16 +46,6 @@ const SkillsSection = () => {
       bgColor: "#37A8A0",
     },
     {
-      tech: "PHP",
-      icon: <DiPhp />,
-      bgColor: "red.400",
-    },
-    {
-      tech: "SQL",
-      icon: <FaDatabase />,
-      bgColor: "orange.400",
-    },
-    {
       tech: "Python",
       icon: <DiPython />,
       bgColor: "yellow.400",
@@ -66,9 +56,24 @@ const SkillsSection = () => {
       bgColor: "#37A8A0",
     },
     {
+      tech: "PHP",
+      icon: <DiPhp />,
+      bgColor: "red.400",
+    },
+    {
+      tech: "SQL",
+      icon: <FaDatabase />,
+      bgColor: "orange.400",
+    },
+    {
       tech: "AWS",
       icon: <FaAws />,
       bgColor: "blue.400",
+    },
+    {
+      tech: "MongoDB",
+      icon: <DiMongodb />,
+      bgColor: "#D4904F",
     },
     {
       tech: "GitHub",
@@ -95,7 +100,6 @@ const SkillsSection = () => {
         w="100%"
         fontWeight="900"
         fontSize="50"
-        pb=".3em"
       >
         Skills
       </Heading>

@@ -38,7 +38,7 @@ const Header = () => {
           margin="0 auto"
         >
           <HStack
-            px={16}
+            px={{base:"4", md:"6"}}
             py={4}
             justifyContent="space-between"
             alignItems="center"

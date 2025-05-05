@@ -1,4 +1,4 @@
-import { Heading, HStack, Image, Text, Box} from "@chakra-ui/react";
+import { Heading, HStack, Image, Text, Box, Wrap, WrapItem} from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 import { useColorModeValue } from "@chakra-ui/react";
 import ProjectPopout from "./ProjectPopout";
@@ -78,24 +78,27 @@ const Card = ({ title, type, description, feature1Heading, feature1Description, 
         </Box>
 
         {/* Tech stack */}
-        <HStack spacing={2} mt={2}>
+        <Wrap mt={2}>
           {stack.map((tech) => (
-            <Box
+            <WrapItem
+              as="span"
+              
               key={tech}
               px={2}
               py={1}
-              fontSize="sm"
+              mx={1}
+              fontSize="15"
               fontFamily='monospace'
-              fontWeight="bold"
+              fontWeight="500"
               color={useColorModeValue("gray.700", "gray.400")}
               borderRadius="full"
-              border="2px"
+              border="1px"
               borderColor={useColorModeValue("gray.700", "gray.400")}
             >
               {tech}
-            </Box>
+            </WrapItem>
           ))}
-        </HStack>
+        </Wrap>
       
       </button>
       

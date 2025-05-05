@@ -78,11 +78,8 @@ const ContactMeSection = () => {
         >
           Contact
         </Heading>
-        <Text fontSize={20}>
+        <Text fontSize={18} pb={2}>
           If you would like to get in touch, fill out the form and I'll get straight back to you.
-        </Text>
-        <Text fontSize={20}>
-          Alternatively, send me an email at <Text as="span" fontWeight="bold">julianjenkinson@hotmail.com</Text>
         </Text>
 
         <Box pt={2} rounded="md" w="100%">

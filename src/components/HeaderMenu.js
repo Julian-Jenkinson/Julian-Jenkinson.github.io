@@ -5,7 +5,7 @@ import {
     MenuItem,
     Button,
   } from "@chakra-ui/react";
-  import { ChevronDownIcon } from "@chakra-ui/icons";
+  import { HamburgerIcon } from "@chakra-ui/icons";
   
   const HeaderMenu = () => {
     
@@ -23,8 +23,7 @@ import {
 
     return (
       <Menu>
-        <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-          Menu
+        <MenuButton as={Button} rightIcon={<HamburgerIcon />}>
         </MenuButton>
         <MenuList>
           <MenuItem
