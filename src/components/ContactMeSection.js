@@ -65,8 +65,9 @@ const ContactMeSection = () => {
       spacing={8}
       bg={useColorModeValue("white", "black")}
       color={useColorModeValue("black", "white")}
+      width="100%"
     >
-      <VStack w="1000px" px={32} alignItems="flex-start">
+      <VStack w={{base:"100%", md:"700px", lg:"800px"}} px={0} alignItems="flex-center">
         <Heading 
           as="h1"
           textAlign="center"
@@ -77,7 +78,7 @@ const ContactMeSection = () => {
         >
           Contact
         </Heading>
-        <Box p={6} rounded="md" w="100%">
+        <Box p={0} rounded="md" w="100%">
           <form onSubmit={formik.handleSubmit}>
             <VStack spacing={4}>
               <FormControl isInvalid={formik.touched.firstName && !!formik.errors.firstName}>

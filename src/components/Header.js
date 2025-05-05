@@ -33,7 +33,10 @@ const Header = () => {
         WebkitBackdropFilter: 'blur(10px)',
       }}
       >
-        <Box maxWidth="1280px" margin="0 auto">
+        <Box 
+          maxWidth="1280px" 
+          margin="0 auto"
+        >
           <HStack
             px={16}
             py={4}

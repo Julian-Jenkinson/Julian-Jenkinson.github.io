@@ -11,7 +11,8 @@ const SkillGrid = ({techList}) => {
             <Flex 
                 justify="center" 
                 align="center" 
-                width='100vw'
+                //width="100%"
+                
             >
                 <SimpleGrid 
                     columns={{ base: 3, md: 5, lg: 6 }} 
@@ -30,7 +31,7 @@ const SkillGrid = ({techList}) => {
                             transform: "scale(1.1)",
                         }}
                     >
-                        <Text fontSize="60">{item.icon}</Text>
+                        <Text fontSize="50">{item.icon}</Text>
                     </Box>
                     ))}
                 </SimpleGrid>

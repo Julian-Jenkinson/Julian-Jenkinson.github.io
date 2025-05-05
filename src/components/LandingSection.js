@@ -28,8 +28,8 @@ const LandingSection = () => (
   >
     <VStack>
       <Text fontSize="20px" fontWeight="700" color="gray.500">Hi, I'm</Text>
-      <Heading fontSize="92px" fontWeight="900">Julian</Heading>
-      <Text fontSize="92px" fontWeight="900">Jenkinson</Text>
+      <Heading fontSize={{ base: "70", md: "85", lg: "92px" }} fontWeight="900">Julian</Heading>
+      <Text fontSize={{ base: "70", md: "85", lg: "92px" }} fontWeight="900">Jenkinson</Text>
       <Text fontSize="25px" fontWeight="600" color="gray.500">A Full Stack Web Developer</Text>
       <HStack>
 

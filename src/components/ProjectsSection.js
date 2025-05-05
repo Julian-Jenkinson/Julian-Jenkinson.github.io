@@ -72,7 +72,7 @@ const ProjectsSection = () => {
     <FullScreenSection as="section"
       id="projects-section"
       isDarkBackground
-      p={10}
+      //p={0}
       alignItems="flex-start"
       spacing={8}
       bg={useColorModeValue("white", "black")} 

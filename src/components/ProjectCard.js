@@ -30,6 +30,7 @@ const Card = ({ title, type, description, feature1Heading, feature1Description, 
           position="relative"
           borderRadius="10px"
           overflow="hidden"
+          //width="100%"
         >
           <Image
             src={image1Src}
