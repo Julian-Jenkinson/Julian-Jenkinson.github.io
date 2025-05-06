@@ -3,18 +3,18 @@
   "name": "Portfolio of Julian Jenkinson",
   "icons": [
     {
-      "src": "logo1PWA.svg",
+      "src": "logo1.svg",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/svg"
     },
     {
-      "src": "logo1PWA.svg",
+      "src": "logo1.svg",
       "type": "image/svg",
       "sizes": "192x192"
     },
     {
-      "src": "logo1PWA.svg",
-      "type": "image/svg",
+      "src": "PWALogo1.png",
+      "type": "image/png",
       "sizes": "512x512"
     }
   ],
