@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Text, Box, HStack, Button } from "@chakra-ui/react";
 import ThemeToggle from './ThemeToggle';
 import { useColorModeValue } from "@chakra-ui/react";
-import HeaderMenu from "./HeaderMenu";
+import HeaderMenu from "./HeaderMenu";// not use this
 
 
 
@@ -25,9 +25,9 @@ const Header = () => {
       top={0}
       left={0}
       right={0}
-      translateY={0}
+      //translateY={0}
       backgroundColor="transparent"
-      zIndex="1000"
+      zIndex="9999"
       sx={{
         backdropFilter: 'blur(10px)',
         WebkitBackdropFilter: 'blur(10px)',
