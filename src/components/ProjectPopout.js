@@ -6,7 +6,9 @@ import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1Heading, feature1Description, feature2Heading, feature2Description, feature3Heading, feature3Description, summary, image1Src, image2Src, image3Src }) => {
   return (
+    
     <Box
+      //overlay
       position="fixed"
       top='0'
       left='0'
@@ -16,7 +18,7 @@ const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1
       height="100vh"
       bg="blackAlpha.700"
       backdropFilter="blur(6px)"
-      zIndex="2000"
+      zIndex="20000"//very top
       display="flex"
       alignItems="center"
       justifyContent="center"

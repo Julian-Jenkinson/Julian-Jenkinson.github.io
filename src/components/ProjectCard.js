@@ -49,7 +49,8 @@ const Card = ({ title, type, description, feature1Heading, feature1Description, 
             left="0"
             right="0"
             height="40%"
-            bgGradient="linear(to-t, blackAlpha.800 10%, rgba(0,0,0,0.6) 50%, transparent 100%)"
+            bgGradient="linear(to-t, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0.3) 60%, transparent 100%)"
+
             pointerEvents="none"
           />
           <Box
@@ -82,7 +83,6 @@ const Card = ({ title, type, description, feature1Heading, feature1Description, 
           {stack.map((tech) => (
             <WrapItem
               as="span"
-              
               key={tech}
               px={2}
               py={1}

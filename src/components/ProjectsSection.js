@@ -37,7 +37,7 @@ const projects = [
     feature2Description:"Perfect scores on Googles lighthouse test promotes higher search rankings and increased user satisfaction.",
     feature3Heading:"SEO Ready",
     feature3Description: "Optimized images, fast load times, relevant keywords, best accessibility practices, and structured meta tags work together to boost search engine visibility and rankings. This site is ready to go.",
-    getImage1Src: () => require("../images/project2.1.webp"),
+    getImage1Src: () => require("../images/project2.1.png"),
     getImage2Src: () => require("../images/project2.2.png"),
     stack: ['HTML', 'CSS', 'LESS', 'JS', 'Netlify'],
     repo: "https://github.com/julian-jenkinson/Lume_Web_Design",
