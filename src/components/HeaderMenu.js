@@ -22,11 +22,16 @@ import { Menu, MenuButton, MenuList, MenuItem, Button } from "@chakra-ui/react";
           sx={{ marginLeft: '0 !important' }}
           bg="none"
           transition="transform 0.1s ease"
-          _hover={{ transform: "scale(1.2)" }}
+          _hover={{ transform: "scale(1.2)", background:"none" }}
         >
           <HamburgerIcon w={6} h={6} />
         </MenuButton>
-        <MenuList>
+        <MenuList 
+          bg="rgba(255, 255, 255, 0.15)" // semi-transparent white
+          backdropFilter="blur(10px)"
+          border="1px solid rgba(255, 255, 255, 0.2)" // optional: soft border
+          boxShadow="lg"
+        >
           <MenuItem
             href="#landing-section"
             onClick={(event) => {
