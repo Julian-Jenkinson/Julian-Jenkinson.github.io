@@ -1,6 +1,6 @@
 import React from "react";
 import { useFormik } from "formik";
-import { Box, Button, FormControl, FormErrorMessage, FormLabel, Heading, Input, Select, Textarea, VStack, Text} from "@chakra-ui/react";
+import { Link, Box, Button, FormControl, FormErrorMessage, FormLabel, Heading, Input, Select, Textarea, VStack, Text} from "@chakra-ui/react";
 import * as Yup from "yup";
 import FullScreenSection from "./FullScreenSection";
 import { useColorModeValue } from "@chakra-ui/react";
@@ -79,8 +79,24 @@ const ContactMeSection = () => {
           Contact
         </Heading>
         <Text fontSize={18} pb={2}>
-          If you would like to get in touch, fill out the form and I'll get straight back to you.
+          If you would like to get in touch, fill out the form or email me and I'll get straight back to you.
         </Text>
+
+        <Link href="mailto:julianjenkinson@hotmail.com" isExternal>
+          <Text 
+            fontFamily="monospace"
+            fontSize={16} 
+            pb={2} 
+            transition="transform 0.9s ease"
+            _hover={{ 
+              textDecoration: "none", 
+              //color: 'rgb(196,255,134)',
+              fontWeight:"600"
+            }}
+            >
+            julianjenkinson@hotmail.com
+          </Text>
+        </Link>
 
         <Box pt={2} rounded="md" w="100%">
           <form onSubmit={formik.handleSubmit}>

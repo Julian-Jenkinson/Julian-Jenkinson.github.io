@@ -85,7 +85,6 @@ const HeaderMenu = () => {
         size="full"
       >  
         <DrawerOverlay bg="rgba(0, 0, 0, 0.10)" />
-        />
         <DrawerContent
         color={textColor}
           bg="transparent"
