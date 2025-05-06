@@ -15,7 +15,8 @@
     {
       "src": "logo1PWA.svg",
       "type": "image/svg",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "maskable"
     }
   ],
   "start_url": ".",
