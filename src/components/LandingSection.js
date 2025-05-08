@@ -34,7 +34,7 @@ const LandingSection = () => (
       <HStack>
 
       <a
-        href="https://drive.google.com/file/d/1g0I-1ZxyEdo5J4l5Woq5xI79im_ssANQ/view?usp=sharing"
+        href="https://drive.google.com/file/d/1eCXQoQhoVvJa8E-C9ySUANO-BjWblVjI/view?usp=sharing"
         target="_blank"
         rel="noopener noreferrer"
       >
