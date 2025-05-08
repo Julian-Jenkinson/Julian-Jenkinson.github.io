@@ -72,7 +72,7 @@ const ProjectsSection = () => {
     <FullScreenSection as="section"
       id="projects-section"
       isDarkBackground
-      //p={0}
+      pt={10}
       alignItems="flex-center"
       margin="auto"
       spacing={8}
@@ -86,7 +86,6 @@ const ProjectsSection = () => {
         fontWeight="900"
         fontSize="50"
         pb=".3em"
-
       >
         Projects
       </Heading>

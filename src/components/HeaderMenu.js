@@ -60,7 +60,7 @@ const HeaderMenu = () => {
         behavior: "smooth",
         block: "start",
       });
-      
+      onClose();
     }
     
   };
@@ -87,6 +87,7 @@ const HeaderMenu = () => {
       >  
         <DrawerOverlay bg="rgba(0, 0, 0, 0.10)"
         zIndex="1000" // middle z ---------------------------
+        
         />
         <DrawerContent
           color={textColor}
@@ -95,7 +96,7 @@ const HeaderMenu = () => {
           WebkitBackdropFilter="blur(10px)"
           zIndex="1000" // middle z ---------------------------
           //mt="80px"
-          
+          onClick={onClose}//
         >
           <DrawerBody 
             display="flex" 

@@ -21,7 +21,6 @@ const SkillGrid = ({ techList }) => {
   <SimpleGrid 
     columns={{ base: 3, md: 5, lg: 6 }} 
     spacing={10}
-    mb={12}
   >
     {techList.map((item) => (
       <Box 
