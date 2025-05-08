@@ -83,21 +83,25 @@ const HeaderMenu = () => {
         onClose={onClose} 
         blockScrollOnMount={false}
         size="full"
+        
       >  
-        <DrawerOverlay bg="rgba(0, 0, 0, 0.10)" />
+        <DrawerOverlay bg="rgba(0, 0, 0, 0.10)"
+        zIndex="1000" // middle z ---------------------------
+        />
         <DrawerContent
-        color={textColor}
+          color={textColor}
           bg="transparent"
           backdropFilter="blur(10px)"
           WebkitBackdropFilter="blur(10px)"
-          zIndex="999"
-          mt="80px"
+          zIndex="1000" // middle z ---------------------------
+          //mt="80px"
           
         >
           <DrawerBody 
             display="flex" 
             justifyContent="center"
-            pt={12}
+            //alignItems="center"
+            pt="140px"
           >
             <VStack spacing={2} fontSize="42" fontWeight="900">
               <Box 

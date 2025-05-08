@@ -3,6 +3,7 @@ import { Box, Button, Heading, HStack, IconButton, Image, Text, useColorModeValu
 import { CloseIcon } from "@chakra-ui/icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import ThemeToggle from "./ThemeToggle";
 
 const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1Heading, feature1Description, feature2Heading, feature2Description, feature3Heading, feature3Description, summary, image1Src, image2Src, image3Src }) => {
   return (
@@ -137,7 +138,7 @@ const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1
           <Heading>
             <Text mt={8} mb={2} fontFamily="body" fontSize="26px" fontWeight="900">{feature2Heading}</Text>
           </Heading>
-          <Text mb={4} fontSize="16px">{feature2Description}</Text>
+          <Text mb={4} fontSize="16px">{feature2Description}{title === "My Portfolio (2025)" && <ThemeToggle />}</Text>    
           <Box display="grid" placeItems="center" width="100%" height="auto">
             <Image
               src={image2Src}

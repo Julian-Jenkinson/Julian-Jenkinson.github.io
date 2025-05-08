@@ -1,4 +1,3 @@
-//import { ColorModeProvider } from "@/components/ui/color-mode"
 import { ChakraProvider, ColorModeScript, extendTheme } from "@chakra-ui/react";
 import Header from "./components/Header";
 import LandingSection from "./components/LandingSection";
@@ -8,8 +7,6 @@ import ContactMeSection from "./components/ContactMeSection";
 import Footer from "./components/Footer";
 import theme from "./components/Theme"
 
-
-
 function App() {
   return (
     <>
@@ -17,11 +14,14 @@ function App() {
     <ChakraProvider theme={theme}>
  
         <main>
+          
           <Header />
-          <LandingSection />
-          <SkillsSection />
-          <ProjectsSection />
-          <ContactMeSection />
+          
+            <LandingSection />
+            <SkillsSection />
+            <ProjectsSection />
+            <ContactMeSection />
+          
           <Footer />
           
         </main>

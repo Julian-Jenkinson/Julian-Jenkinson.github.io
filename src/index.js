@@ -3,16 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ColorModeScript } from '@chakra-ui/react';
+import { ColorModeScript, PortalManager } from '@chakra-ui/react';
 import theme from './components/Theme';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
   <React.StrictMode>
-    <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-    <App />
+    <ColorModeScript initialColorMode={theme.config.initialColorMode} /> 
+    <PortalManager zIndex="998">
+      <App />
+    </PortalManager>
   </React.StrictMode>
 );
 

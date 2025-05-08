@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Text, Box, HStack, Button } from "@chakra-ui/react";
 import ThemeToggle from './ThemeToggle';
 import { useColorModeValue } from "@chakra-ui/react";
-import HeaderMenu from "./HeaderMenu";// not use this
+import HeaderMenu from "./HeaderMenu";
 
 
 
@@ -25,12 +25,11 @@ const Header = () => {
       top={0}
       left={0}
       right={0}
-      //translateY={0}
       backgroundColor="transparent"
-      zIndex="9999"
+      zIndex="999" //bottom z -------------------
       sx={{
         backdropFilter: 'blur(10px)',
-        WebkitBackdropFilter: 'blur(10px)',
+        '-webkit-backdrop-filter': 'blur(10px)',
       }}
       >
         <Box 
@@ -43,6 +42,8 @@ const Header = () => {
             py={4}
             justifyContent="space-between"
             alignItems="center"
+            position="relative"//need this?
+            zIndex="1001" // top z---------------------
           >
             <nav>
             <a
@@ -57,7 +58,8 @@ const Header = () => {
               bg='none' 
               color={useColorModeValue('black','rgb(196,255,134)')}
               transition="transform 0.1s ease"
-              _hover={{ transform: "scale(1.1)" }}>            
+              _hover={{ transform: "scale(1.1)" }}
+              >            
                 Julian Jenkinson
               </Button>
             </a>
