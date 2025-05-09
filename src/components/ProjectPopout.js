@@ -1,5 +1,5 @@
 // src/components/PopoutWindow.js
-import { Box, Button, Heading, HStack, IconButton, Image, Text, useColorModeValue } from "@chakra-ui/react";
+import { Wrap, WrapItem, Box, Button, Heading, HStack, IconButton, Image, Text, useColorModeValue } from "@chakra-ui/react";
 import { CloseIcon } from "@chakra-ui/icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
@@ -30,11 +30,12 @@ const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1
         position="relative"
         //bg={useColorModeValue("gray.100", "gray.900")}
         //fontFamily="monospace"
-        //px={14}
+        //px={0}
+        //mx={0}
         //pt={14}
         //pb={10}
         //borderRadius="xl"
-        width="90%"
+        width="85%"
         maxWidth="1000px"
         height="80vh"
         //overflowY="auto"
@@ -58,7 +59,7 @@ const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1
         <Box
           bg={useColorModeValue("gray.100", "gray.900")}
           fontFamily="monospace"
-          px={14}
+          px={{base: "8", md: "14"}}
           pt={14}
           pb={10}
           borderRadius="xl"
@@ -71,24 +72,27 @@ const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1
             {title}
           </Heading>
 
-          <HStack spacing={2} mt={2} mb={6} justifyContent="center">
-            {stack.map((tech) => (
-              <Box
-                key={tech}
-                px={2}
-                py={1}
-                fontSize="sm"
-                fontFamily="monospace"
-                fontWeight="bold"
-                color={useColorModeValue("gray.700", "gray.300")}
-                borderRadius="full"
-                border="2px"
-                borderColor={useColorModeValue("gray.700", "gray.300")}
-              >
-                {tech}
-              </Box>
-            ))}
-          </HStack>
+          {/* Tech stack */}
+                  <Wrap my={2}>
+                    {stack.map((tech) => (
+                      <WrapItem
+                        as="span"
+                        key={tech}
+                        px={2}
+                        py={1}
+                        mx={1}
+                        fontSize="15"
+                        fontFamily='monospace'
+                        fontWeight="500"
+                        color={useColorModeValue("gray.700", "gray.400")}
+                        borderRadius="full"
+                        border="1px"
+                        borderColor={useColorModeValue("gray.700", "gray.400")}
+                      >
+                        {tech}
+                      </WrapItem>
+                    ))}
+                  </Wrap>
 
           <Text mb={4} fontSize="18px">{description}</Text>
 
