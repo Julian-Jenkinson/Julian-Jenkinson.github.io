@@ -35,7 +35,7 @@ const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1
         //pt={14}
         //pb={10}
         //borderRadius="xl"
-        width="85%"
+        width="90%"
         maxWidth="1000px"
         height="80vh"
         //overflowY="auto"
@@ -59,7 +59,7 @@ const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1
         <Box
           bg={useColorModeValue("gray.100", "gray.900")}
           fontFamily="monospace"
-          px={{base: "8", md: "14"}}
+          px={{base: "6", md: "14"}}
           pt={14}
           pb={10}
           borderRadius="xl"
@@ -99,6 +99,8 @@ const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1
           <HStack spacing={3} mb={8}>
             <a href={repo} target="_blank" rel="noopener noreferrer">
               <Button
+                p={{base:"9px", sm:"18px"}}
+                fontSize={{base: "14px", sm: "18px"}}
                 fontWeight="900"
                 bg={useColorModeValue('black', 'rgb(196,255,134)')}
                 color={useColorModeValue('rgb(196,255,134)', 'black')}
@@ -111,6 +113,8 @@ const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1
             {url && (
             <a href={url} target="_blank" rel="noopener noreferrer">
               <Button
+                p={{base:"9px", sm:"18px"}}
+                fontSize={{base: "14px", sm: "18px"}}
                 fontWeight="900"
                 bg={useColorModeValue('black', 'rgb(196,255,134)')}
                 color={useColorModeValue('rgb(196,255,134)', 'black')}
