@@ -26,13 +26,12 @@ const LandingSection = () => (
     bg={useColorModeValue("white", "black")} 
     color={useColorModeValue("black", "white")}
   >
-    <VStack>
-      <Text fontSize="20px" fontWeight="700" color="gray.500">Hi, I'm</Text>
-      <Heading fontSize={{ base: "70", md: "85", lg: "92px" }} fontWeight="900">Julian</Heading>
-      <Text fontSize={{ base: "70", md: "85", lg: "92px" }} fontWeight="900">Jenkinson</Text>
-      <Text fontSize="25px" fontWeight="600" color="gray.500">A Full Stack Web Developer</Text>
+    <VStack lineHeight={.8}>
+      <Text fontSize="20px" fontFamily="mono" fontWeight="500" color="gray.500">Hi, I'm</Text>
+      <Heading style={{ fontFamily: 'Kanit'}} fontSize={{ base: "70", md: "85", lg: "112px" }} fontWeight="700"  >Julian</Heading>
+      <Text style={{ fontFamily: 'Kanit'}} fontSize={{ base: "70", md: "96", lg: "112px" }} fontWeight="700">Jenkinson</Text>
+      <Text fontSize="20px" fontFamily="mono" fontWeight="400" color="gray.500" py={4}>A Full Stack Web Developer</Text>
       <HStack>
-
       <a
         href="https://drive.google.com/file/d/1eCXQoQhoVvJa8E-C9ySUANO-BjWblVjI/view?usp=sharing"
         target="_blank"
