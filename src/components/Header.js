@@ -1,18 +1,7 @@
 import React, { useEffect, useState } from "react";
-import {
-  Box,
-  HStack,
-  Button,
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-  Wrap,
-  WrapItem,
-  useColorModeValue,
-  IconButton,
-} from "@chakra-ui/react";
+import { Box, HStack, Button, Accordion, AccordionItem, AccordionButton, 
+         AccordionPanel, AccordionIcon, Wrap, WrapItem, useColorModeValue, 
+         IconButton } from "@chakra-ui/react";
 import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
