@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Box, HStack, Button, Accordion, AccordionItem, AccordionButton, 
          AccordionPanel, AccordionIcon, Wrap, WrapItem, useColorModeValue, 
-         IconButton } from "@chakra-ui/react";
+         IconButton, Text } from "@chakra-ui/react";
 import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   const textColor = useColorModeValue("black", "white");
   const highlightColor = "rgb(196,255,134)";
-  const sectionIds = ["landing", "skills", "projects", "contactme"];
+  const sectionIds = ["home", "skills", "projects", "contactme"];
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
@@ -40,9 +40,9 @@ const Header = () => {
     const id = `${anchor}-section`;
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({
+      window.scrollTo({
+        top: element.offsetTop -40,
         behavior: "smooth",
-        block: "start",
       });
     }
   };
@@ -96,9 +96,13 @@ const Header = () => {
                 </HStack>
 
                 <AccordionPanel pb={4}>
-                  <Wrap spacing={{base:"5", sm:"8"}} px="16px"fontWeight="600" textAlign="right" justify="flex-end">
+                  <HStack 
+                    spacing={{base:"1", sm:"8"}} 
+                    px="16px"fontWeight="600" 
+                    textAlign="right" 
+                    justify={{base:"space-between", sm:"flex-end"}}>
                     {sectionIds.map((id) => (
-                      <WrapItem
+                      <Text
                         key={id}
                         cursor="pointer"
                         fontSize={{base:"16px", sm:"18px"}} 
@@ -112,9 +116,9 @@ const Header = () => {
                         transitionProperty="transform, color"
                       >
                         {id === "contactme" ? "Contact" : id.charAt(0).toUpperCase() + id.slice(1)}
-                      </WrapItem>
+                      </Text>
                     ))}
-                  </Wrap>
+                  </HStack>
                 </AccordionPanel>
               </>
             )}

@@ -18,7 +18,7 @@ const handleClick = (anchor) => {
 const LandingSection = () => (
   
   <FullScreenSection
-    id="landing-section"
+    id="home-section"
     justifyContent="center"
     //alignItems="center"
     isDarkBackground
@@ -26,10 +26,10 @@ const LandingSection = () => (
     color={useColorModeValue("black", "white")}
   >
     <VStack lineHeight={.8}>
-      <Text fontSize="20px" fontFamily="mono" fontWeight="500" color="gray.500">Hi, I'm</Text>
-      <Heading style={{ fontFamily: 'Kanit'}} fontSize={{ base: "65", md: "96", lg: "112px" }} fontWeight="700"  >Julian</Heading>
-      <Text style={{ fontFamily: 'Kanit'}} fontSize={{ base: "65", md: "96", lg: "112px" }} fontWeight="700">Jenkinson</Text>
-      <Text fontSize="20px" fontFamily="mono" fontWeight="400" color="gray.500" py={4}>A Full Stack Web Developer</Text>
+      <Text fontSize="18px" fontFamily="mono" fontWeight="500" color="gray.500">Hi, I'm</Text>
+      <Heading style={{ fontFamily: 'Kanit'}} fontSize={{ base: "62", md: "96", lg: "112px" }} fontWeight="700"  >Julian</Heading>
+      <Text style={{ fontFamily: 'Kanit'}} fontSize={{ base: "62", md: "96", lg: "112px" }} fontWeight="700">Jenkinson</Text>
+      <Text fontSize="18px" fontFamily="mono" fontWeight="400" color="gray.500" py={4}>A Full Stack Web Developer</Text>
       <HStack>
       <a
         href="https://drive.google.com/file/d/1eCXQoQhoVvJa8E-C9ySUANO-BjWblVjI/view?usp=sharing"
