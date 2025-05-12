@@ -4,7 +4,6 @@ import FullScreenSection from "./FullScreenSection";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-//could move this to utilities??
 const handleClick = (anchor) => {
   const id = `${anchor}-section`;
   const element = document.getElementById(id);
@@ -28,8 +27,8 @@ const LandingSection = () => (
   >
     <VStack lineHeight={.8}>
       <Text fontSize="20px" fontFamily="mono" fontWeight="500" color="gray.500">Hi, I'm</Text>
-      <Heading style={{ fontFamily: 'Kanit'}} fontSize={{ base: "70", md: "85", lg: "112px" }} fontWeight="700"  >Julian</Heading>
-      <Text style={{ fontFamily: 'Kanit'}} fontSize={{ base: "70", md: "96", lg: "112px" }} fontWeight="700">Jenkinson</Text>
+      <Heading style={{ fontFamily: 'Kanit'}} fontSize={{ base: "65", md: "96", lg: "112px" }} fontWeight="700"  >Julian</Heading>
+      <Text style={{ fontFamily: 'Kanit'}} fontSize={{ base: "65", md: "96", lg: "112px" }} fontWeight="700">Jenkinson</Text>
       <Text fontSize="20px" fontFamily="mono" fontWeight="400" color="gray.500" py={4}>A Full Stack Web Developer</Text>
       <HStack>
       <a
