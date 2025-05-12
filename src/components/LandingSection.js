@@ -27,8 +27,8 @@ const LandingSection = () => (
   >
     <VStack lineHeight={.8}>
       <Text fontSize="18px" fontFamily="mono" fontWeight="500" color="gray.500">Hi, I'm</Text>
-      <Heading style={{ fontFamily: 'Kanit'}} fontSize={{ base: "62", md: "96", lg: "112px" }} fontWeight="700"  >Julian</Heading>
-      <Text style={{ fontFamily: 'Kanit'}} fontSize={{ base: "62", md: "96", lg: "112px" }} fontWeight="700">Jenkinson</Text>
+      <Heading style={{ fontFamily: 'Kanit'}} fontSize={{ base: "62", md: "96", lg: "116px" }} fontWeight="700"  >Julian</Heading>
+      <Text style={{ fontFamily: 'Kanit'}} fontSize={{ base: "62", md: "96", lg: "116px" }} fontWeight="700">Jenkinson</Text>
       <Text fontSize="18px" fontFamily="mono" fontWeight="400" color="gray.500" py={4}>A Full Stack Web Developer</Text>
       <HStack>
       <a
