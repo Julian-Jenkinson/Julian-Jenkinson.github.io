@@ -1,4 +1,3 @@
-// src/components/PopoutWindow.js
 import { Wrap, WrapItem, Box, Button, Heading, HStack, IconButton, Image, Text, useColorModeValue } from "@chakra-ui/react";
 import { CloseIcon } from "@chakra-ui/icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
