@@ -28,7 +28,7 @@ const SkillGrid = ({ techList }) => {
         textAlign="center"
         bg={item.bgColor}
         borderRadius="full"
-        p={4}
+        p={3.5}
         transition="all 0.1s ease"
         _hover={{ transform: "scale(1.1)" }}
         onMouseEnter={() => setHoveredItem(item)}

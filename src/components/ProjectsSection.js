@@ -55,7 +55,7 @@ const projects = [
     feature2Description:"Save your eyes - Dark mode by default! Leveraging Chakra's dark mode greatness. Try it here ->",
     feature3Heading:"Projects",
     feature3Description:"See my latest projects. Check back soon - there's more in the works",
-    summary:"Part portfolio, part digital sandbox — where I code, create, and occasionally break things for fun!",    
+    summary:"Part portfolio, part digital sandbox — where I code, learn, and sometimes break things!",    
     getImage1Src: () => require("../images/project3.1.png"),
     //getImage2Src: () => require("../images/project3.1.png"),
     getImage3Src: () => require("../images/project3.3.png"),
