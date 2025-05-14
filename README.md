@@ -12,22 +12,21 @@ A short description and goal for the project
 
 **Ops** - Github
 
-## How to use this project ⭐
-
-### 🛠 Local Development
-
-To run the project locally:
-
-```bash
-npm install   # Install dependencies
-npm start     # Start the development server
-
-###  Deployment 💫
+##  Deployment 💫
 
 This project is hosted on GitHub Pages. To deploy the latest changes, run:
 
 ```
 npm run deploy
+```
+
+## How to use this project ⭐
+
+To run the project locally:
+
+```
+npm install   # Install dependencies
+npm start     # Start the development server
 ```
 
 
