@@ -1,11 +1,12 @@
 # My Portfolio
-A short description and goal for the project
+Built with React to showcase my projects, development skills, and recent projects.
 
 ## Features 💥
-- **feature 1** - some information
-- **feature 2** - some information
-- **feature 3** - some information
-- **feature 4** - some information
+- **React Fundamentals** - State, hooks, props, controlled components, conditional rendering, event handling, lists/keys etc
+- **Built with Chakra-UI** For an accessibile, clean UI
+- **Responsive** - Responsive design for all screen sizes
+- **Dark Mode** - To protect your eyes!
+- **FormIK** - For form setup
 
 ## Technology ✨ 
 **Frontend** - React, Chakra UI, FormIK, Framer-Motion
