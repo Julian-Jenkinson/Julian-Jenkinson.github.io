@@ -17,7 +17,7 @@ A short description and goal for the project
 This project is hosted on GitHub Pages. To deploy the latest changes, run:
 
 ```
-npm run deploy
+npm run deploy # deploy to GitHub pages
 ```
 
 ## How to use this project ⭐
