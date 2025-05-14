@@ -18,7 +18,7 @@ Built with React to showcase my projects, development skills, and recent project
 This project is hosted on GitHub Pages. To deploy the latest changes, run:
 
 ```
-npm run deploy # deploy to GitHub pages
+npm run deploy    # deploy to GitHub pages
 ```
 
 ## How to use this project ⭐
@@ -26,8 +26,8 @@ npm run deploy # deploy to GitHub pages
 To run the project locally:
 
 ```
-npm install   # Install dependencies
-npm start     # Start the development server
+npm install       # Install dependencies
+npm start         # Start the development server
 ```
 
 
