@@ -3,11 +3,16 @@ import { CloseIcon } from "@chakra-ui/icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import ThemeToggle from "./ThemeToggle";
+import { motion } from "framer-motion";
 
-const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1Heading, feature1Description, feature2Heading, feature2Description, feature3Heading, feature3Description, summary, image1Src, image2Src, image3Src }) => {
+const MotionBox = motion(Box);
+
+const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1Heading, 
+      feature1Description, feature2Heading, feature2Description, feature3Heading, 
+      feature3Description, summary, image1Src, image2Src, image3Src }) => {
   return (
     
-    <Box
+    <MotionBox
       //overlay
       position="fixed"
       top='0'
@@ -24,21 +29,17 @@ const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1
       justifyContent="center"
       onClick={onClose}
       mt="0 !important"
+
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.95 }}
+      transition={{ duration: 0.2 }}
     >
       <Box
         position="relative"
-        //bg={useColorModeValue("gray.100", "gray.900")}
-        //fontFamily="monospace"
-        //px={0}
-        //mx={0}
-        //pt={14}
-        //pb={10}
-        //borderRadius="xl"
         width="90%"
         maxWidth="1000px"
         height="80vh"
-        //overflowY="auto"
-        //onClick={(e) => e.stopPropagation()}
       >
         <IconButton
           onClick={onClose}
@@ -175,7 +176,7 @@ const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1
           <Text mt={8} fontSize="16px">{summary}</Text>
         </Box>
       </Box>
-    </Box>
+    </MotionBox>
   );
 };
 
