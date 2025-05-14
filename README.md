@@ -8,19 +8,26 @@ A short description and goal for the project
 - **feature 4** - some information
 
 ## Technology ✨ 
-**Frontend** - React, HTML, CSS, JS, Chakra UI, FormIK
+**Frontend** - React, Chakra UI, FormIK, Framer-Motion
 
 **Ops** - Github
 
-
-## Deployment 💫
-some text about netlify - CICD
-
-npm run deploy
-
 ## How to use this project ⭐
-use it like this - view locally
 
-npm install
-npm start
+### 🛠 Local Development
+
+To run the project locally:
+
+```bash
+npm install   # Install dependencies
+npm start     # Start the development server
+
+###  Deployment 💫
+
+This project is hosted on GitHub Pages. To deploy the latest changes, run:
+
+```
+npm run deploy
+```
+
 
