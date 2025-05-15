@@ -2,6 +2,9 @@ import { Heading, HStack, Image, Text, Box, Wrap, WrapItem} from "@chakra-ui/rea
 import React, { useState, useEffect } from "react";
 import { useColorModeValue } from "@chakra-ui/react";
 import ProjectPopout from "./ProjectPopout";
+import { AnimatePresence, motion } from "framer-motion";
+
+const MotionImage = motion(Image);
 
 const Card = ({ title, type, description, feature1Heading, feature1Description, feature2Heading, feature2Description, feature3Heading, feature3Description, summary, image1Src, image2Src, image3Src, stack, repo, url, }) => {
   const [showPopout, setShowPopout] = useState(false);
@@ -32,14 +35,20 @@ const Card = ({ title, type, description, feature1Heading, feature1Description, 
           overflow="hidden"
           //width="100%"
         >
-          <Image
+          <MotionImage
             src={image1Src}
             alt={image1Src}
             objectFit="cover"
             width="100%"
             height="auto"
-            transition="transform 0.3s ease"
-            _hover={{ transform: "scale(1.03)" }}
+            whileHover={{
+              scale: 1.03,
+              transition: {
+                type: "spring",
+                stiffness: 100,
+                damping: 15,
+              }
+            }}
           />
 
           
@@ -103,26 +112,29 @@ const Card = ({ title, type, description, feature1Heading, feature1Description, 
       </button>
       
 
+      <AnimatePresence mode="wait">
       {showPopout && (
-  <ProjectPopout
-    onClose={togglePopout}
-    title={title}
-    stack={stack}
-    description={description}
-    repo={repo}
-    url={url}
-    feature1Heading={feature1Heading}
-    feature1Description={feature1Description}
-    feature2Heading={feature2Heading}
-    feature2Description={feature2Description}
-    feature3Heading={feature3Heading}
-    feature3Description={feature3Description}
-    summary={summary}
-    image1Src={image1Src}
-    image2Src={image2Src}
-    image3Src={image3Src}
-  />
-)}
+        <ProjectPopout
+          key="project-popout"
+          onClose={togglePopout}
+          title={title}
+          stack={stack}
+          description={description}
+          repo={repo}
+          url={url}
+          feature1Heading={feature1Heading}
+          feature1Description={feature1Description}
+          feature2Heading={feature2Heading}
+          feature2Description={feature2Description}
+          feature3Heading={feature3Heading}
+          feature3Description={feature3Description}
+          summary={summary}
+          image1Src={image1Src}
+          image2Src={image2Src}
+          image3Src={image3Src}
+        />
+      )}
+    </AnimatePresence>
       
       
     </>

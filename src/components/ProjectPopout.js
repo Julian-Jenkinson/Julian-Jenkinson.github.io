@@ -3,17 +3,25 @@ import { CloseIcon } from "@chakra-ui/icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import ThemeToggle from "./ThemeToggle";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const MotionBox = motion(Box);
+const MotionOverlay = motion(Box);
 
 const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1Heading, 
       feature1Description, feature2Heading, feature2Description, feature3Heading, 
       feature3Description, summary, image1Src, image2Src, image3Src }) => {
   return (
     
-    <MotionBox
-      //overlay
+    <MotionOverlay
+      //motion
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, transition: { delay: 0.1, duration: 0.3 } }}
+      transition={{ duration: 0.3 }}
+      style={{ perspective: '1200px'}}
+      
+      onClick={onClose}
       position="fixed"
       top='0'
       left='0'
@@ -27,19 +35,20 @@ const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1
       display="flex"
       alignItems="center"
       justifyContent="center"
-      onClick={onClose}
       mt="0 !important"
-
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.95 }}
-      transition={{ duration: 0.2 }}
-    >
-      <Box
+      >
+      
+      <MotionBox
         position="relative"
         width="90%"
         maxWidth="1000px"
         height="80vh"
+
+        key="card"
+        initial={{ rotateX: -90, scale: 0 }}
+        animate={{ rotateX: 0, scale: 1, transition: { type: "spring", stiffness: 150, damping: 17, } }}
+        exit={{ rotateX: -90, scale: 0, transition: { type: "spring", stiffness: 170, damping: 20 } }}
+        style={{ transformStyle: 'preserve-3d' }}
       >
         <IconButton
           onClick={onClose}
@@ -175,8 +184,9 @@ const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1
           )}
           <Text mt={8} fontSize="16px">{summary}</Text>
         </Box>
-      </Box>
-    </MotionBox>
+      </MotionBox>
+      
+    </MotionOverlay>
   );
 };
 

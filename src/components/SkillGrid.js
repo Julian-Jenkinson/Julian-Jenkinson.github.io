@@ -1,44 +1,63 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Box, Text, SimpleGrid } from "@chakra-ui/react";
+import { motion } from "framer-motion";
+
+const MotionBox = motion(Box);
+const MotionText = motion(Text);
 
 const SkillGrid = ({ techList }) => {
   const [hoveredItem, setHoveredItem] = useState(null);
+  const [spinCount, setSpinCount] = useState(0);
+  const [prevTech, setPrevTech] = useState(null);
+
+  // This is just to ensure the skill text spin gets a complete rotation
+  useEffect(() => {
+    if (hoveredItem?.tech && hoveredItem.tech !== prevTech) {
+      setSpinCount((prev) => prev + 1);
+      setPrevTech(hoveredItem.tech);
+    }
+  }, [hoveredItem, prevTech]);
 
   return (
     <Box>
-  <Text
-    fontSize="24"
-    fontWeight="600"
-    fontFamily="monospace"
-    color={hoveredItem ? hoveredItem.bgColor : "transparent"}
-    pb={6}
-    textAlign="center"
-    transition="color 0.5s ease-in"
-  >
-    {hoveredItem ? `[${hoveredItem.tech}]` : "\u00A0" /* non-breaking space */}
-  </Text>
-
-  <SimpleGrid 
-    columns={{ base: 3, md: 5, lg: 6 }} 
-    spacing={10}
-  >
-    {techList.map((item) => (
-      <Box 
-        key={item.tech} 
+      <MotionText
+        fontSize="24"
+        fontWeight="600"
+        fontFamily="monospace"
+        color={hoveredItem ? hoveredItem.bgColor : "transparent"}
+        pb={6}
         textAlign="center"
-        bg={item.bgColor}
-        borderRadius="full"
-        p={3.5}
-        transition="all 0.1s ease"
-        _hover={{ transform: "scale(1.1)" }}
-        onMouseEnter={() => setHoveredItem(item)}
-        onMouseLeave={() => setHoveredItem(null)}
+        style={{ transformStyle: "preserve-3d" }}
+        initial={false}
+        animate={{
+          rotateY: spinCount * 360,
+          scale: hoveredItem ? 1.1 : 1,
+        }}
+        transition={{ type: "spring", stiffness: 100, damping: 20, mass: 2.5 }}
       >
-        <Text fontSize="50">{item.icon}</Text>
-      </Box>
-    ))}
-  </SimpleGrid>
-</Box>
+        {hoveredItem ? `[${hoveredItem.tech}]` : "\u00A0"}
+      </MotionText>
+
+      <SimpleGrid columns={{ base: 3, md: 5, lg: 6 }} spacing={10}>
+        {techList.map((item) => (
+          <MotionBox
+            key={item.tech}
+            textAlign="center"
+            bg={item.bgColor}
+            borderRadius="full"
+            p={3.5}
+            onMouseEnter={() => setHoveredItem(item)}
+            onMouseLeave={() => setHoveredItem(null)}
+            whileHover={{
+              scale: 1.15,
+              transition: { type: "spring", stiffness: 300, damping: 15 },
+            }}
+          >
+            <Text fontSize="50">{item.icon}</Text>
+          </MotionBox>
+        ))}
+      </SimpleGrid>
+    </Box>
   );
 };
 

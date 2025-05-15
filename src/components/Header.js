@@ -3,6 +3,8 @@ import { Box, HStack, Button, Accordion, AccordionItem, AccordionButton,
          AccordionPanel, AccordionIcon, Wrap, WrapItem, useColorModeValue, 
          IconButton, Text } from "@chakra-ui/react";
 import ThemeToggle from "./ThemeToggle";
+import { animate } from "framer-motion";
+
 
 const Header = () => {
   const textColor = useColorModeValue("black", "white");
@@ -36,16 +38,26 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [activeSection]);
 
+  
+
   const handleClick = (anchor) => {
     const id = `${anchor}-section`;
     const element = document.getElementById(id);
+    
     if (element) {
-      window.scrollTo({
-        top: element.offsetTop -40,
-        behavior: "smooth",
+      const top = element.offsetTop - 40;
+  
+      animate(window.scrollY, top, {
+        type: "spring",
+        stiffness: 130,
+        damping: 17,
+        onUpdate(value) {
+          window.scrollTo(0, value);
+        }
       });
     }
   };
+
 
   return (
     <Box
@@ -78,7 +90,8 @@ const Header = () => {
                     color={useColorModeValue("black", highlightColor)}
                     transition="transform 0.1s ease"
                     _hover={{ transform: "scale(1.1)" }}
-                    onClick={() => handleClick("landing")}
+                    onClick={() => handleClick("home")}
+                    
                   >
                     Julian Jenkinson
                   </Button>
