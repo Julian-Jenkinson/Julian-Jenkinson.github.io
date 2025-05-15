@@ -46,9 +46,10 @@ const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1
 
         key="card"
         initial={{ rotateX: -90, scale: 0 }}
-        animate={{ rotateX: 0, scale: 1, transition: { type: "spring", stiffness: 150, damping: 17, } }}
+        animate={{ rotateX: 0, scale: 1, transition: { type: "spring", stiffness: 60, damping: 12, } }}
         exit={{ rotateX: -90, scale: 0, transition: { type: "spring", stiffness: 170, damping: 20 } }}
-        style={{ transformStyle: 'preserve-3d' }}
+        style={{ transformStyle: 'preserve-3d', perspective: '1200px' }}
+        
       >
         <IconButton
           onClick={onClose}

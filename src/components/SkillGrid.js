@@ -33,7 +33,7 @@ const SkillGrid = ({ techList }) => {
           rotateY: spinCount * 360,
           scale: hoveredItem ? 1.1 : 1,
         }}
-        transition={{ type: "spring", stiffness: 100, damping: 20, mass: 2.5 }}
+        transition={{ type: "spring", stiffness: 80, damping: 20, mass: 2.5 }}
       >
         {hoveredItem ? `[${hoveredItem.tech}]` : "\u00A0"}
       </MotionText>
@@ -53,8 +53,8 @@ const SkillGrid = ({ techList }) => {
               transition: { type: "spring", stiffness: 300, damping: 15 },
             }}
             whileTap={{
-              scale: 1.15,
-              transition: { type: "spring", stiffness: 300, damping: 15 },
+              scale: 1.2,
+              transition: { type: "spring", stiffness: 400, damping: 15 },
             }}
           >
             <Text fontSize="50">{item.icon}</Text>
