@@ -3,14 +3,23 @@ import { useColorModeValue ,Heading, Text, VStack, HStack, Button} from "@chakra
 import FullScreenSection from "./FullScreenSection";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { animate } from "framer-motion";
+
 
 const handleClick = (anchor) => {
   const id = `${anchor}-section`;
   const element = document.getElementById(id);
+  
   if (element) {
-    element.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
+    const top = element.offsetTop - 40;
+
+    animate(window.scrollY, top, {
+      type: "spring",
+      stiffness: 130,
+      damping: 17,
+      onUpdate(value) {
+        window.scrollTo(0, value);
+      }
     });
   }
 };

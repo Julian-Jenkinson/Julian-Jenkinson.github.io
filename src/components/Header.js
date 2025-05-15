@@ -38,8 +38,6 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [activeSection]);
 
-  
-
   const handleClick = (anchor) => {
     const id = `${anchor}-section`;
     const element = document.getElementById(id);
