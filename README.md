@@ -4,6 +4,7 @@ Built with React to showcase my projects, development skills, and recent project
 ## Features 💥
 - **React Fundamentals** - State, hooks, props, controlled components, conditional rendering, event handling, lists/keys etc
 - **Built with Chakra-UI** For an accessibile, clean UI
+- **Buttery Interactions** - Utilizing Framer Motion to deliver smooth scrolling, swooshing popouts, and an overall springy, dynamic feel.
 - **Responsive** - Responsive design for all screen sizes
 - **Dark Mode** - To protect your eyes!
 - **FormIK** - For form setup
