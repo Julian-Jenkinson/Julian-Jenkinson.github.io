@@ -52,6 +52,10 @@ const SkillGrid = ({ techList }) => {
               scale: 1.15,
               transition: { type: "spring", stiffness: 300, damping: 15 },
             }}
+            whileTap={{
+              scale: 1.15,
+              transition: { type: "spring", stiffness: 300, damping: 15 },
+            }}
           >
             <Text fontSize="50">{item.icon}</Text>
           </MotionBox>

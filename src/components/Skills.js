@@ -2,8 +2,8 @@ import React from "react";
 import FullScreenSection from "./FullScreenSection";
 import { Heading} from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/react";
-import { DiHtml5, DiCss3, DiReact, DiJavascript1, DiLess, DiSass, DiMysql, DiPhp, DiJqueryLogo, DiJqueryUiLogo, DiPython, DiAws, DiGit, DiGithub, DiGithubAlt, DiGithubBadge, DiGithubFull, DiMongodb, DiDatabase } from "react-icons/di";
-import { FaAws, FaDatabase, FaGithub, FaLess, FaPhp } from "react-icons/fa";
+import { DiHtml5, DiCss3, DiReact, DiJavascript1, DiSass, DiPhp, DiJqueryLogo, DiPython, DiMongodb } from "react-icons/di";
+import { FaAws, FaDatabase, FaGithub, FaLess} from "react-icons/fa";
 import { SiCplusplus } from "react-icons/si";
 import SkillGrid from "./SkillGrid";
 
