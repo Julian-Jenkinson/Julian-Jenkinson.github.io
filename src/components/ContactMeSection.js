@@ -79,7 +79,7 @@ const ContactMeSection = () => {
           Contact
         </Heading>
         <Text fontSize={18} pb={2}>
-          If you would like to get in touch, fill out the form or email me and I'll get straight back to you.
+          If you would like to get in touch, fill out the form below or email me - I'll get straight back to you.
         </Text>
 
         <Link href="mailto:julianjenkinson@hotmail.com" isExternal>

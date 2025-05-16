@@ -73,6 +73,7 @@ const ProjectsSection = () => {
       id="projects-section"
       isDarkBackground
       pt={10}
+      pb={6}
       alignItems="flex-center"
       margin="auto"
       spacing={8}
