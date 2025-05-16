@@ -4,6 +4,7 @@ import { Box, HStack, Button, Accordion, AccordionItem, AccordionButton,
          IconButton, Text } from "@chakra-ui/react";
 import ThemeToggle from "./ThemeToggle";
 import { animate } from "framer-motion";
+import { scrollToSection } from "./Utilities/scrollToSection";
 
 
 const Header = () => {
@@ -38,25 +39,6 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [activeSection]);
 
-  const handleClick = (anchor) => {
-    const id = `${anchor}-section`;
-    const element = document.getElementById(id);
-    
-    if (element) {
-      const top = element.offsetTop - 40;
-  
-      animate(window.scrollY, top, {
-        type: "spring",
-        stiffness: 130,
-        damping: 17,
-        onUpdate(value) {
-          window.scrollTo(0, value);
-        }
-      });
-    }
-  };
-
-
   return (
     <Box
       position="fixed"
@@ -88,7 +70,7 @@ const Header = () => {
                     color={useColorModeValue("black", highlightColor)}
                     transition="transform 0.1s ease"
                     _hover={{ transform: "scale(1.1)" }}
-                    onClick={() => handleClick("home")}
+                    onClick={() => scrollToSection("home")}
                     
                   >
                     Julian Jenkinson
@@ -117,7 +99,7 @@ const Header = () => {
                         key={id}
                         cursor="pointer"
                         fontSize={{base:"16px", sm:"18px"}} 
-                        onClick={() => handleClick(id)}
+                        onClick={() => scrollToSection(id)}
                         color={activeSection === id ? highlightColor : textColor}
                         _hover={{
                           transform: "scale(1.05)",
