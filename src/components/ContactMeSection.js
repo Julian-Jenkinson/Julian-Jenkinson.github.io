@@ -126,6 +126,7 @@ const ContactMeSection = () => {
                 <FormLabel htmlFor="type">Type of enquiry</FormLabel>
                 <Select id="type" name="type" {...formik.getFieldProps("type")}>
                   <option value="let's work together">Let's work together!</option>
+                  <option value="spam">Spam</option>
                   <option value="other">Other</option>
                 </Select>
               </FormControl>
