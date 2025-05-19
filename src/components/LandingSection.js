@@ -24,7 +24,7 @@ const LandingSection = () => {
 
         <Heading
           style={{ fontFamily: "Kanit", perspective: 600 }}
-          fontSize={{ base: "62", md: "96", lg: "116px" }}
+          fontSize={{ base: "56", md: "96", lg: "116px" }}
           fontWeight="700"
           display="flex"
           justifyContent="center"
@@ -34,7 +34,7 @@ const LandingSection = () => {
 
         <Heading
           style={{ fontFamily: "Kanit", perspective: 600 }}
-          fontSize={{ base: "62", md: "96", lg: "116px" }}
+          fontSize={{ base: "56", md: "96", lg: "116px" }}
           fontWeight="700"
           display="flex"
           justifyContent="center"

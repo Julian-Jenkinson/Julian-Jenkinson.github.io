@@ -37,7 +37,7 @@ const SkillGrid = ({ techList }) => {
           textAlign="center"
           bg={item.bgColor}
           borderRadius="full"
-          p={3.5}
+          p={{base:2, sm:3.5}}
           style={{ WebkitTapHighlightColor: "transparent" }}
           cursor="pointer"
           onMouseEnter={() => {
