@@ -39,7 +39,7 @@ const projects = [
     feature3Description: "Optimized images, fast load times, relevant keywords, best accessibility practices, and structured meta tags work together to boost search engine visibility and rankings. This site is ready to go.",
     getImage1Src: () => require("../images/project2.1.png"),
     getImage2Src: () => require("../images/project2.2.png"),
-    stack: ['HTML', 'CSS', 'LESS', 'JS', 'Netlify', 'Framer-Motion'],
+    stack: ['HTML', 'CSS', 'LESS', 'JS', 'Netlify'],
     repo: "https://github.com/julian-jenkinson/Lume_Web_Design",
     url: "https://lumewebdesign.com.au",
 
@@ -55,7 +55,7 @@ const projects = [
     feature2Description:"Save your eyes - Dark mode by default! Leveraging Chakra's dark mode greatness. Try it here ->",
     feature3Heading:"Buttery Interactions",
     feature3Description:"Utilizing Framer Motion to deliver smooth scrolling, swooshing popouts, and an overall springy, dynamic user experience.",
-    summary:"Part portfolio, part digital sandbox — where I code, learn, and sometimes break things!",    
+    summary:"Part portfolio, part sandbox — A place to code, learn, and sometimes break things!",    
     getImage1Src: () => require("../images/project3.1.png"),
     //getImage2Src: () => require("../images/project3.1.png"),
     getImage3Src: () => require("../images/project3.3.png"),
