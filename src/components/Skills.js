@@ -2,7 +2,8 @@ import React from "react";
 import FullScreenSection from "./FullScreenSection";
 import { Heading} from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/react";
-import { DiHtml5, DiCss3, DiReact, DiJavascript1, DiSass, DiPhp, DiJqueryLogo, DiPython, DiMongodb } from "react-icons/di";
+import { DiHtml5, DiCss3, DiReact, DiJavascript1, DiSass, DiPhp, DiJqueryLogo, 
+         DiPython, DiMongodb, DiNpm } from "react-icons/di";
 import { FaAws, FaDatabase, FaGithub, FaLess} from "react-icons/fa";
 import { SiCplusplus } from "react-icons/si";
 import SkillGrid from "./SkillGrid";
@@ -79,6 +80,11 @@ const SkillsSection = () => {
       tech: "GitHub",
       icon: <FaGithub />,
       bgColor: "purple.400",
+    },
+    {
+      tech: "NPM",
+      icon: <DiNpm />,
+      bgColor: "#D56B70",
     },
   ];
 

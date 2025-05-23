@@ -49,7 +49,7 @@ const SkillGrid = ({ techList }) => {
             scale: 1.15,
             transition: { type: "spring", stiffness: 300, damping: 15 },
           }}
-          whileTap={{
+          whileTap={{ 
             scale: 1.15,
             transition: { type: "spring", stiffness: 400, damping: 15 },
           }}
