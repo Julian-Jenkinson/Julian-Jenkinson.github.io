@@ -5,7 +5,7 @@ import { useColorModeValue } from "@chakra-ui/react";
 import { DiHtml5, DiCss3, DiReact, DiJavascript1, DiSass, DiPhp, DiJqueryLogo, 
          DiPython, DiMongodb, DiNpm } from "react-icons/di";
 import { FaAws, FaDatabase, FaGithub, FaLess} from "react-icons/fa";
-import { SiCplusplus } from "react-icons/si";
+import { SiCplusplus, SiTypescript } from "react-icons/si";
 import SkillGrid from "./SkillGrid";
 
 const SkillsSection = () => {
@@ -35,6 +35,11 @@ const SkillsSection = () => {
       tech: "JavaScript",
       icon: <DiJavascript1 />,
       bgColor: "#D56B70",
+    },
+    {
+      tech: "TypeScript",
+      icon: <SiTypescript />,
+      bgColor: "#5F8AAC",
     },
     {
       tech: "React.JS",

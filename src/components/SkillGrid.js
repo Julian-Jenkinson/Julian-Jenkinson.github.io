@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Box, Text, SimpleGrid } from "@chakra-ui/react";
+import { Box, Text, SimpleGrid, Flex } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 const MotionBox = motion(Box);
@@ -34,7 +34,7 @@ const SkillGrid = ({ techList }) => {
         {techList.map((item) => (
           <MotionBox
           key={item.tech}
-          textAlign="center"
+          
           bg={item.bgColor}
           borderRadius="full"
           p={{base:2, sm:3.5}}

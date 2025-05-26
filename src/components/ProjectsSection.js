@@ -6,6 +6,26 @@ import { useColorModeValue } from "@chakra-ui/react";
 
 const projects = [
   {
+    title: "Straight-UI (IN DEVELOPMENT)",
+    type: "React UI-Library",
+    description:
+      "Straight-UI is a modern, React-based UI component library built for fast, flexible development in both TypeScript and JavaScript projects.",
+    feature1Heading:"Storybook",
+    feature1Description:"Utilizing Storybook to visually present and test each component in isolation, enabling a better development experience and richer documentation.",
+    feature2Heading:"Early access via NPM",
+    feature2Description: "Straight-UI is available for installation via NPM. Please note this is an alpha release with experimental and limited components",
+    feature3Heading:"TypeScript and JavaScript",
+    feature3Description:"Built in TypeScript and fully compatible with JavaScript projects.",
+    summary:"Updates coming soon — check back shortly!",
+    getImage1Src: () => require("../images/project0.1.png"),
+    //getImage2Src: () => require("../images/project1.2.png"),
+    //getImage3Src: () => require("../images/project1.3.png"),
+    stack: ['React', 'TS', 'JS', 'Storybook', 'NPM', "Rollup", "Vite"],
+    repo: "https://github.com/julian-jenkinson/Straight-UI",
+    url: "https://Julian-Jenkinson.github.io/Straight-UI/",
+
+  },
+  {
     title: "Graduate Nurse Job Match (2024)",
     type: "Job Platform",
     description:
@@ -59,7 +79,7 @@ const projects = [
     getImage1Src: () => require("../images/project3.1.png"),
     //getImage2Src: () => require("../images/project3.1.png"),
     getImage3Src: () => require("../images/project3.3.png"),
-    stack: ['React JS', 'HTML', 'CSS', 'JS', 'Chakra UI', 'Formik', 'Framer-Motion'],
+    stack: ['React', 'JS', 'Chakra UI', 'Formik', 'Framer-Motion'],
     repo: "https://github.com/julian-jenkinson/Julian-Jenkinson.github.io",
     url: "https://julian-jenkinson.github.io",
 
