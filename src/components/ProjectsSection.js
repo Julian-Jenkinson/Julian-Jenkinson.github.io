@@ -42,7 +42,7 @@ const projects = [
     getImage1Src: () => require("../images/extractor-1.png"),
     //getImage2Src: () => require("../images/extractor-2.png"),
     //getImage3Src: () => require("../images/project1.3.png"),
-    stack: ['TypeScript', 'Node.js', 'Express', 'Axios', 'Cheerio', "Fly.io", "Docker"],
+    stack: ['TypeScript', 'Node.js', 'Express', 'Docker', 'Axios', 'Cheerio', "Fly.io"],
     repo: "https://github.com/julian-jenkinson/Recipe-Extractor-API",
     url: "https://recipe-extractor-api.fly.dev/extract?url=https://www.bbcgoodfood.com/recipes/chicken-tikka-masala",
     urlLabel: "View Example",
@@ -71,7 +71,7 @@ const projects = [
   
   {
     title: "Lume Web Design (2025)",
-    type: "Static Web Site",
+    type: "Website",
     description:
       "A website I developed as a side project. My intention was to master the fundamentals of web development using pure HTML, CSS (LESS) and JS.",
     feature1Heading:"Fully responsive design",
