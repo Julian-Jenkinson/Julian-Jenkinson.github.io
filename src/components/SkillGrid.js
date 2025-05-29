@@ -57,16 +57,15 @@ const SkillGrid = ({ techList }) => {
             setHoveredItem(item);
             setSpinCount((prev) => prev + 1); // Retrigger spin on tap too
           }}
-          
         >
           <Flex
-  justify="center"
-  align="center"
-  w="100%"
-  h="100%"
->
-  <Text fontSize="50">{item.icon}</Text>
-</Flex>
+            justify="center"
+            align="center"
+            w="100%"
+            h="100%"
+          >
+            <Text fontSize="50">{item.icon}</Text>
+          </Flex>
         </MotionBox>
         ))}
       </SimpleGrid>
