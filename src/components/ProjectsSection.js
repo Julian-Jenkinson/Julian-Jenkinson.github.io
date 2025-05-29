@@ -17,13 +17,35 @@ const projects = [
     feature3Heading:"TypeScript and JavaScript",
     feature3Description:"Built in TypeScript and fully compatible with JavaScript projects.",
     summary:"Updates coming soon — check back shortly!",
-    getImage1Src: () => require("../images/project0.1.png"),
+    getImage1Src: () => require("../images/straight-1.png"),
     //getImage2Src: () => require("../images/project1.2.png"),
     //getImage3Src: () => require("../images/project1.3.png"),
-    stack: ['React', 'TS', 'JS', 'Storybook', 'NPM', "Rollup", "Vite"],
+    stack: ['React', 'TypeScript', 'JavaScript', 'Storybook', 'NPM', "Rollup", "Vite"],
     repo: "https://github.com/julian-jenkinson/Straight-UI",
     url: "https://Julian-Jenkinson.github.io/Straight-UI/",
+    urlLabel: "Storybook",
 
+  },
+  {
+    title: "Recipe Extractor API (2025)",
+    type: "REST API",
+    description:
+      "A REST API that extracts recipe details (title, ingredients, instructions, images) from any recipe webpage URL and returns the data in JSON format.",
+    feature1Heading: "The Goal",
+    feature1Description: "Recipe sites often make it difficult to store and re-find recipes. This API extracts recipe data by targeting JSON-LD and Microdata (schema.org) formats, with fallback parsing to handle diverse website structures. The backbone for an upcoming Recipe Index App.",
+    feature2Heading: "Available Publicly",
+    feature2Description: "Supporting both GET and POST methods, this API is publicly accessible and easy to integrate, allowing you to extract recipes quickly and efficiently.",
+    feature3Heading:"Testing",
+    feature3Heading: "Testing",
+    feature3Description: "Utilising the Jest testing framework to test the API across many different recipe sites, ensuring consistent and reliable extraction of recipe data.",
+    summary:"Try it out yourself: curl \"https://recipe-extractor-api.fly.dev/extract?url=https://cooking.nytimes.com/recipes/12965-spaghetti-carbonara\"",
+    getImage1Src: () => require("../images/extractor-1.png"),
+    //getImage2Src: () => require("../images/extractor-2.png"),
+    //getImage3Src: () => require("../images/project1.3.png"),
+    stack: ['TypeScript', 'Node.js', 'Express', 'Axios', 'Cheerio', "Fly.io", "Docker"],
+    repo: "https://github.com/julian-jenkinson/Recipe-Extractor-API",
+    url: "https://recipe-extractor-api.fly.dev/extract?url=https://www.bbcgoodfood.com/recipes/chicken-tikka-masala",
+    urlLabel: "View Example",
   },
   {
     title: "Graduate Nurse Job Match (2024)",
@@ -37,12 +59,13 @@ const projects = [
     feature3Heading:"Chatbot",
     feature3Description:"Integrated chat bot for guided interaction. Utilising Google Dialogflow",
     summary:"A complete job search platform allowing employers to list jobs and graduates to find them. Plus a few extra user-friendly enhancements designed to streamline the process and help job seekers find more opportunities that suit them.",
-    getImage1Src: () => require("../images/project1.1.png"),
-    getImage2Src: () => require("../images/project1.2.png"),
-    getImage3Src: () => require("../images/project1.3.png"),
-    stack: ['PHP', 'HTML', 'CSS', 'JS', "SQL", "AWS", "NGINX"],
+    getImage1Src: () => require("../images/jobmatch-1.png"),
+    getImage2Src: () => require("../images/jobmatch-2.png"),
+    getImage3Src: () => require("../images/jobmatch-3.png"),
+    stack: ['PHP', 'HTML', 'CSS', 'JavaScript', "SQL", "AWS", "NGINX"],
     repo: "https://github.com/julian-jenkinson/Graduate_Nurse_Job_Match",
     //url: "https://URL HERE",
+    //urlLabel: "",
 
   },
   
@@ -57,11 +80,12 @@ const projects = [
     feature2Description:"Perfect scores on Googles lighthouse test promotes higher search rankings and increased user satisfaction.",
     feature3Heading:"SEO Ready",
     feature3Description: "Optimized images, fast load times, relevant keywords, best accessibility practices, and structured meta tags work together to boost search engine visibility and rankings. This site is ready to go.",
-    getImage1Src: () => require("../images/project2.1.png"),
-    getImage2Src: () => require("../images/project2.2.png"),
-    stack: ['HTML', 'CSS', 'LESS', 'JS', 'Netlify'],
+    getImage1Src: () => require("../images/lume-1.png"),
+    getImage2Src: () => require("../images/lume-2.png"),
+    stack: ['HTML', 'CSS', 'LESS', 'JavaScript', 'Netlify'],
     repo: "https://github.com/julian-jenkinson/Lume_Web_Design",
     url: "https://lumewebdesign.com.au",
+    urlLabel: "Website",
 
   },
   {
@@ -76,13 +100,13 @@ const projects = [
     feature3Heading:"Buttery Interactions",
     feature3Description:"Utilizing Framer Motion to deliver smooth scrolling, swooshing popouts, and an overall springy, dynamic user experience.",
     summary:"Part portfolio, part sandbox — A place to code, learn, and sometimes break things!",    
-    getImage1Src: () => require("../images/project3.1.png"),
+    getImage1Src: () => require("../images/portfolio-1.png"),
     //getImage2Src: () => require("../images/project3.1.png"),
-    getImage3Src: () => require("../images/project3.3.png"),
-    stack: ['React', 'JS', 'Chakra UI', 'Formik', 'Framer-Motion'],
+    getImage3Src: () => require("../images/portfolio-3.png"),
+    stack: ['React', 'JavaScript', 'Chakra UI', 'Formik', 'Framer-Motion'],
     repo: "https://github.com/julian-jenkinson/Julian-Jenkinson.github.io",
     url: "https://julian-jenkinson.github.io",
-
+    urlLabel: "Website",
   },
 ];
 
@@ -132,6 +156,7 @@ const ProjectsSection = () => {
               stack={project.stack}
               repo={project.repo}
               url={project.url}
+              urlLabel={project.urlLabel}
             />
           </Box>
         ))}

@@ -10,7 +10,7 @@ const MotionOverlay = motion(Box);
 
 const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1Heading, 
       feature1Description, feature2Heading, feature2Description, feature3Heading, 
-      feature3Description, summary, image1Src, image2Src, image3Src }) => {
+      feature3Description, summary, image1Src, image2Src, image3Src, urlLabel }) => {
   return (
     
     <MotionOverlay
@@ -79,21 +79,14 @@ const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1
           </Heading>
 
           {/* Tech stack */}
-          <Wrap my={2}>
+          <Wrap mb={5} justify="center">
             {stack.map((tech) => (
               <WrapItem
                 as="span"
                 key={tech}
-                px={2}
-                py={1}
-                mx={1}
-                fontSize="15"
-                fontFamily='monospace'
-                fontWeight="500"
-                color={useColorModeValue("gray.700", "gray.400")}
-                borderRadius="full"
-                border="1px"
-                borderColor={useColorModeValue("gray.700", "gray.400")}
+                px={1}
+                fontSize="14"
+                fontWeight="900"
               >
                 {tech}
               </WrapItem>
@@ -106,7 +99,7 @@ const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1
             <a href={repo} target="_blank" rel="noopener noreferrer">
               <Button
                 p={{base:"9px", sm:"18px"}}
-                fontSize={{base: "14px", sm: "18px"}}
+                fontSize={{base: "14px", sm: "16px"}}
                 fontWeight="900"
                 bg={useColorModeValue('black', 'rgb(196,255,134)')}
                 color={useColorModeValue('rgb(196,255,134)', 'black')}
@@ -120,14 +113,14 @@ const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1
             <a href={url} target="_blank" rel="noopener noreferrer">
               <Button
                 p={{base:"9px", sm:"18px"}}
-                fontSize={{base: "14px", sm: "18px"}}
+                fontSize={{base: "14px", sm: "16px"}}
                 fontWeight="900"
                 bg={useColorModeValue('black', 'rgb(196,255,134)')}
                 color={useColorModeValue('rgb(196,255,134)', 'black')}
                 transition="transform 0.1s ease"
                 _hover={{ transform: "scale(1.1)" }}
               >
-                View Website &nbsp;<FontAwesomeIcon icon={faArrowUpRightFromSquare} size="1x" />
+                {urlLabel} &nbsp;<FontAwesomeIcon icon={faArrowUpRightFromSquare} size="1x" />
               </Button>
             </a>
             )}

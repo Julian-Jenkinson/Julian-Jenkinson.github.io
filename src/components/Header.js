@@ -65,7 +65,6 @@ const Header = () => {
                   zIndex="1001"
                 >
                   <Button
-                    fontWeight="900"
                     bg="none"
                     color={useColorModeValue("black", highlightColor)}
                     transition="transform 0.1s ease"
@@ -73,7 +72,9 @@ const Header = () => {
                     onClick={() => scrollToSection("home")}
                     
                   >
+                    <Text fontSize="18px" fontWeight="900">
                     Julian Jenkinson
+                    </Text>
                   </Button>
 
                   <HStack spacing={0}>
@@ -91,14 +92,15 @@ const Header = () => {
                 <AccordionPanel pb={4}>
                   <HStack 
                     spacing={{base:"1", sm:"8"}} 
-                    px="16px"fontWeight="600" 
+                    px="16px"
+                    fontWeight="900" 
                     textAlign="right" 
                     justify={{base:"space-between", sm:"flex-end"}}>
                     {sectionIds.map((id) => (
                       <Text
                         key={id}
                         cursor="pointer"
-                        fontSize={{base:"16px", sm:"18px"}} 
+                        fontSize={{base:"18px", sm:"18px"}} 
                         onClick={() => scrollToSection(id)}
                         color={activeSection === id ? highlightColor : textColor}
                         _hover={{

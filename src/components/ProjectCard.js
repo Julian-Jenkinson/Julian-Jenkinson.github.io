@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const MotionImage = motion(Image);
 
-const Card = ({ title, type, description, feature1Heading, feature1Description, feature2Heading, feature2Description, feature3Heading, feature3Description, summary, image1Src, image2Src, image3Src, stack, repo, url, }) => {
+const Card = ({ title, type, description, feature1Heading, feature1Description, feature2Heading, feature2Description, feature3Heading, feature3Description, summary, image1Src, image2Src, image3Src, stack, repo, url, urlLabel}) => {
   const [showPopout, setShowPopout] = useState(false);
 
   // Disable background scrolling when popout is open
@@ -55,7 +55,7 @@ const Card = ({ title, type, description, feature1Heading, feature1Description, 
             left="0"
             right="0"
             height="40%"
-            bgGradient="linear(to-t, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0.3) 60%, transparent 100%)"
+            bgGradient="linear(to-t, blackAlpha.900 0%, blackAlpha.700 40%, blackAlpha.400 80%, transparent 100%)"
             pointerEvents="none"
           />
           <Box
@@ -72,19 +72,20 @@ const Card = ({ title, type, description, feature1Heading, feature1Description, 
             <Heading 
               textAlign="left"
               fontWeight="900" 
-              fontSize="16px"
+              fontSize="17px"
             >
               {title}
             </Heading>
             <Text
               textAlign="left"
-              fontSize="12px"
+              fontSize="13px"
               fontWeight="900"
               color="black"
               bg="white"
               rounded="full"
-              px={2}   
-              //py={.5}
+              px={2}
+              mt={2}
+              py={.5}
               display="inline-block"
             >
               {type}
@@ -98,16 +99,9 @@ const Card = ({ title, type, description, feature1Heading, feature1Description, 
             <WrapItem
               as="span"
               key={tech}
-              px={2}
-              py={1}
-              mx={1}
+              px={1}
               fontSize="13"
-              fontFamily='monospace'
-              fontWeight="500"
-              color={useColorModeValue("gray.700", "gray.400")}
-              borderRadius="full"
-              border="1px"
-              borderColor={useColorModeValue("gray.700", "gray.400")}
+              fontWeight="900"
             >
               {tech}
             </WrapItem>
@@ -134,6 +128,7 @@ const Card = ({ title, type, description, feature1Heading, feature1Description, 
           image1Src={image1Src}
           image2Src={image2Src}
           image3Src={image3Src}
+          urlLabel={urlLabel}
         />
       )}
     </AnimatePresence>
