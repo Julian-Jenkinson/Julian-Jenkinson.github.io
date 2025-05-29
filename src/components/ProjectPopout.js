@@ -3,7 +3,7 @@ import { CloseIcon } from "@chakra-ui/icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import ThemeToggle from "./ThemeToggle";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion} from "framer-motion";
 
 const MotionBox = motion(Box);
 const MotionOverlay = motion(Box);
@@ -20,7 +20,6 @@ const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1
       exit={{ opacity: 0, transition: { delay: 0.1, duration: 0.3 } }}
       transition={{ duration: 0.3 }}
       style={{ perspective: '1200px'}}
-      
       onClick={onClose}
       position="fixed"
       top='0'
@@ -36,20 +35,17 @@ const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1
       alignItems="center"
       justifyContent="center"
       mt="0 !important"
-      >
-      
+    >
       <MotionBox
         position="relative"
         width="90%"
         maxWidth="1000px"
         height="80vh"
-
         key="card"
         initial={{ rotateX: -90, scale: 0 }}
         animate={{ rotateX: 0, scale: 1, transition: { type: "spring", stiffness: 60, damping: 12, } }}
         exit={{ rotateX: -90, scale: 0, transition: { type: "spring", stiffness: 170, damping: 20 } }}
         style={{ transformStyle: 'preserve-3d', perspective: '1200px' }}
-        
       >
         <IconButton
           onClick={onClose}
@@ -83,26 +79,26 @@ const ProjectPopout = ({ onClose, title, stack, description, repo, url, feature1
           </Heading>
 
           {/* Tech stack */}
-                  <Wrap my={2}>
-                    {stack.map((tech) => (
-                      <WrapItem
-                        as="span"
-                        key={tech}
-                        px={2}
-                        py={1}
-                        mx={1}
-                        fontSize="15"
-                        fontFamily='monospace'
-                        fontWeight="500"
-                        color={useColorModeValue("gray.700", "gray.400")}
-                        borderRadius="full"
-                        border="1px"
-                        borderColor={useColorModeValue("gray.700", "gray.400")}
-                      >
-                        {tech}
-                      </WrapItem>
-                    ))}
-                  </Wrap>
+          <Wrap my={2}>
+            {stack.map((tech) => (
+              <WrapItem
+                as="span"
+                key={tech}
+                px={2}
+                py={1}
+                mx={1}
+                fontSize="15"
+                fontFamily='monospace'
+                fontWeight="500"
+                color={useColorModeValue("gray.700", "gray.400")}
+                borderRadius="full"
+                border="1px"
+                borderColor={useColorModeValue("gray.700", "gray.400")}
+              >
+                {tech}
+              </WrapItem>
+            ))}
+          </Wrap>
 
           <Text mb={4} fontSize="18px">{description}</Text>
 

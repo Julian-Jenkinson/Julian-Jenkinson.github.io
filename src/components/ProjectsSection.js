@@ -1,6 +1,6 @@
 import React from "react";
 import FullScreenSection from "./FullScreenSection";
-import { Heading, SimpleGrid } from "@chakra-ui/react";
+import { Heading, SimpleGrid, Box } from "@chakra-ui/react";
 import ProjectCard from "./ProjectCard";
 import { useColorModeValue } from "@chakra-ui/react";
 
@@ -111,29 +111,32 @@ const ProjectsSection = () => {
         Projects
       </Heading>
       
-      <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={8}>
+      <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing={8}>
         {projects.map((project) => (
-          <ProjectCard
-            key={project.title}
-            title={project.title}
-            type={project.type}
-            description={project.description}
-            feature1Heading={project.feature1Heading}
-            feature1Description={project.feature1Description}
-            feature2Heading={project.feature2Heading}
-            feature2Description={project.feature2Description}
-            feature3Heading={project.feature3Heading}
-            feature3Description={project.feature3Description}
-            summary={project.summary}
-            image1Src={project.getImage1Src?.()}
-            image2Src={project.getImage2Src?.()}
-            image3Src={project.getImage3Src?.()}
-            stack={project.stack}
-            repo={project.repo}
-            url={project.url}
-          />
+          <Box key={project.title} alignSelf="start">
+            <ProjectCard
+              key={project.title}
+              title={project.title}
+              type={project.type}
+              description={project.description}
+              feature1Heading={project.feature1Heading}
+              feature1Description={project.feature1Description}
+              feature2Heading={project.feature2Heading}
+              feature2Description={project.feature2Description}
+              feature3Heading={project.feature3Heading}
+              feature3Description={project.feature3Description}
+              summary={project.summary}
+              image1Src={project.getImage1Src?.()}
+              image2Src={project.getImage2Src?.()}
+              image3Src={project.getImage3Src?.()}
+              stack={project.stack}
+              repo={project.repo}
+              url={project.url}
+            />
+          </Box>
         ))}
       </SimpleGrid>
+      
     </FullScreenSection>
   );
 };

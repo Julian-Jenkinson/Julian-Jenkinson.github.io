@@ -1,5 +1,5 @@
-import { Heading, HStack, Image, Text, Box, Wrap, WrapItem} from "@chakra-ui/react";
-import React, { useState, useEffect } from "react";
+import { Heading, Image, Text, Box, Wrap, WrapItem} from "@chakra-ui/react";
+import { useState, useEffect } from "react";
 import { useColorModeValue } from "@chakra-ui/react";
 import ProjectPopout from "./ProjectPopout";
 import { AnimatePresence, motion } from "framer-motion";
@@ -33,7 +33,6 @@ const Card = ({ title, type, description, feature1Heading, feature1Description, 
           position="relative"
           borderRadius="10px"
           overflow="hidden"
-          //width="100%"
         >
           <MotionImage
             src={image1Src}
@@ -50,8 +49,6 @@ const Card = ({ title, type, description, feature1Heading, feature1Description, 
               }
             }}
           />
-
-          
           <Box
             position="absolute"
             bottom="0"
@@ -59,7 +56,6 @@ const Card = ({ title, type, description, feature1Heading, feature1Description, 
             right="0"
             height="40%"
             bgGradient="linear(to-t, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0.3) 60%, transparent 100%)"
-
             pointerEvents="none"
           />
           <Box
@@ -71,16 +67,25 @@ const Card = ({ title, type, description, feature1Heading, feature1Description, 
             zIndex={1}
             color="white"
             pointerEvents="none"
+            textAlign="left"
           >
             <Heading 
-              textAlign="left" 
-              fontSize="22px"
+              textAlign="left"
+              fontWeight="900" 
+              fontSize="16px"
             >
               {title}
             </Heading>
             <Text
               textAlign="left"
-              fontSize="18px"
+              fontSize="12px"
+              fontWeight="900"
+              color="black"
+              bg="white"
+              rounded="full"
+              px={2}   
+              //py={.5}
+              display="inline-block"
             >
               {type}
             </Text>
@@ -96,7 +101,7 @@ const Card = ({ title, type, description, feature1Heading, feature1Description, 
               px={2}
               py={1}
               mx={1}
-              fontSize="15"
+              fontSize="13"
               fontFamily='monospace'
               fontWeight="500"
               color={useColorModeValue("gray.700", "gray.400")}
@@ -108,10 +113,7 @@ const Card = ({ title, type, description, feature1Heading, feature1Description, 
             </WrapItem>
           ))}
         </Wrap>
-      
       </button>
-      
-
       <AnimatePresence mode="wait">
       {showPopout && (
         <ProjectPopout
@@ -135,8 +137,6 @@ const Card = ({ title, type, description, feature1Heading, feature1Description, 
         />
       )}
     </AnimatePresence>
-      
-      
     </>
   );
 };
