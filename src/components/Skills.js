@@ -38,7 +38,7 @@ const SkillsSection = () => {
     },
     {
       tech: "TypeScript",
-      icon: <SiTypescript />,
+      icon: <SiTypescript size={40}/>,
       bgColor: "#5F8AAC",
     },
     {
@@ -63,12 +63,12 @@ const SkillsSection = () => {
     },
     {
       tech: "PHP",
-      icon: <DiPhp />,
+      icon: <DiPhp/>,
       bgColor: "red.400",
     },
     {
       tech: "SQL",
-      icon: <FaDatabase />,
+      icon: <FaDatabase size={38} />,
       bgColor: "orange.400",
     },
     {
