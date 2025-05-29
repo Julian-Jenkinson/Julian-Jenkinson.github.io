@@ -38,7 +38,7 @@ const SkillsSection = () => {
     },
     {
       tech: "TypeScript",
-      icon: <SiTypescript size={40}/>,
+      icon: <SiTypescript size={35}/>,
       bgColor: "#5F8AAC",
     },
     {
@@ -58,7 +58,7 @@ const SkillsSection = () => {
     },
     {
       tech: "C++",
-      icon: <SiCplusplus />,
+      icon: <SiCplusplus size={45}/>,
       bgColor: "#37A8A0",
     },
     {
