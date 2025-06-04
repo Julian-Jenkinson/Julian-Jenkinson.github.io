@@ -55,7 +55,7 @@ const projects = [
     feature1Heading:"Dynamic Web Application",
     feature1Description:"Dynamic web application powered by PHP and SQL. This app will search the jobs database and match you with job opportunities that suit you",
     feature2Heading:"GIS Integration",
-    feature2Description:"Map assisted job search powered by Google Maps API",
+    feature2Description:"Map assisted job search powered by Google Maps API integrating Geocoding and Autocomplete functionality to ensure robust and accurate location handling",
     feature3Heading:"Chatbot",
     feature3Description:"Integrated chat bot for guided interaction. Utilising Google Dialogflow",
     summary:"A complete job search platform allowing employers to list jobs and graduates to find them. Plus a few extra user-friendly enhancements designed to streamline the process and help job seekers find more opportunities that suit them.",
