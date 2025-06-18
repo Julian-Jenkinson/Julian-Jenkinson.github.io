@@ -16,7 +16,7 @@ const projects = [
     feature2Description: "Straight-UI is available for installation via NPM. Please note this is an alpha release with experimental and limited components",
     feature3Heading:"TypeScript and JavaScript",
     feature3Description:"Built in TypeScript and fully compatible with JavaScript projects.",
-    summary:"Updates coming soon — check back shortly!",
+    summary:"Updates coming soon - check back shortly!",
     getImage1Src: () => require("../images/straight-1.png"),
     //getImage2Src: () => require("../images/project1.2.png"),
     //getImage3Src: () => require("../images/project1.3.png"),
@@ -86,7 +86,6 @@ const projects = [
     repo: "https://github.com/julian-jenkinson/Lume_Web_Design",
     url: "https://lumewebdesign.com.au",
     urlLabel: "Website",
-
   },
   {
     title: "My Portfolio (2025)",
