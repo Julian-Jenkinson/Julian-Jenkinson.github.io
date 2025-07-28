@@ -1,14 +1,15 @@
 import React from "react";
-import {Box, Flex} from "@chakra-ui/react";
+import {Box, Flex, useColorModeValue} from "@chakra-ui/react";
 
 const Footer = () => {
   return (
-    <Box backgroundColor="black">
+    <Box bg={useColorModeValue("white", "transparent")}>
+
       <footer>
         <Flex
           margin="0 auto"
           px={12}
-          color="white"
+          color={useColorModeValue("black", "white")}
           justifyContent="center"
           alignItems="center"
           maxWidth="1024px"

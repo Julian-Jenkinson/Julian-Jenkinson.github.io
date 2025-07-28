@@ -14,7 +14,7 @@ const LandingSection = () => {
       id="home-section"
       justifyContent="center"
       isDarkBackground
-      bg={useColorModeValue("white", "black")}
+      bg={useColorModeValue("white", "transparent")}
       color={useColorModeValue("black", "white")}
     >
       <VStack lineHeight={0.8}>

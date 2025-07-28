@@ -101,7 +101,7 @@ const SkillsSection = () => {
       alignItems="flex-center"
       margin="auto"
       spacing={8}
-      bg={useColorModeValue("white", "black")} 
+      bg={useColorModeValue("white", "transparent")} 
       color={useColorModeValue("black", "white")}
       
     >

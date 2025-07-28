@@ -63,7 +63,7 @@ const ContactMeSection = () => {
       isDarkBackground
       py={10}
       spacing={8}
-      bg={useColorModeValue("white", "black")}
+      bg={useColorModeValue("white", "transparent")}
       color={useColorModeValue("black", "white")}
       width="100%"
     >
