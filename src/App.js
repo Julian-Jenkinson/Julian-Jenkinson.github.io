@@ -36,7 +36,7 @@ function AppContent() {
             pointerEvents: "none",
           }}
         >
-          <Starfield quantity={130} staticity={60} ease={80} />
+          <Starfield quantity={150} staticity={80} ease={20} />
         </div>
       )}
 

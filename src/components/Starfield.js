@@ -17,9 +17,9 @@ function useMousePosition() {
 
 export default function Starfield({
   className = "",
-  quantity = 20, // fewer stars for more "spacey" look
+  quantity = 120, // number of starts
   staticity = 150, // higher = less parallax
-  ease = 200, // slower easing = slower movement
+  ease = 100, // slower easing = slower movement
   refresh = false,
 }) {
   const canvasRef = useRef(null);
