@@ -1,4 +1,4 @@
-import { ChakraProvider, ColorModeScript, extendTheme, useColorModeValue } from "@chakra-ui/react";
+import { ChakraProvider, ColorModeScript, useColorModeValue } from "@chakra-ui/react";
 import Header from "./components/Header";
 import LandingSection from "./components/LandingSection";
 import SkillsSection from "./components/Skills";
@@ -9,13 +9,12 @@ import theme from "./components/Theme";
 import Starfield from "./components/Starfield";
 import { Global } from "@emotion/react";
 
-// ✅ Inner component that can safely use Chakra hooks
 function AppContent() {
   const isDarkMode = useColorModeValue(false, true);
 
   return (
     <>
-      {/* Make body transparent only in dark mode */}
+      {/* transparent bg for dark mode */}
       <Global
         styles={{
           body: {
@@ -24,7 +23,7 @@ function AppContent() {
         }}
       />
 
-      {/* Background Layer in dark mode */}
+      {/* startfield background for dark mode */}
       {isDarkMode && (
         <div
           style={{
@@ -33,15 +32,14 @@ function AppContent() {
             left: 0,
             width: "100%",
             height: "100%",
-            zIndex: -1, // keep behind everything
+            zIndex: -1,
             pointerEvents: "none",
           }}
         >
-          <Starfield quantity={130} maxDistance={80} ease={50} />
+          <Starfield quantity={130} staticity={60} ease={80} />
         </div>
       )}
 
-      {/* Main App Content */}
       <main>
         <Header />
         <LandingSection />
@@ -60,7 +58,7 @@ export default function App() {
       {/* Color mode initial setup */}
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
 
-      {/* ✅ Now inside ChakraProvider so hooks work */}
+      {/* inside ChakraProvider so hooks work */}
       <AppContent />
     </ChakraProvider>
   );

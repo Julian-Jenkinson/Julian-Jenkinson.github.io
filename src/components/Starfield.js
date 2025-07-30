@@ -213,11 +213,11 @@ export default function Starfield({
       circle.translateX +=
         (mouse.current.x / (staticity / circle.magnetism) -
           circle.translateX) /
-        ease*1.6; // higher ease makes stars follow mouse more
+        ease; // higher ease makes stars follow mouse more
       circle.translateY +=
         (mouse.current.y / (staticity / circle.magnetism) -
           circle.translateY) /
-        ease *1.6;
+        ease;
 
       // respawn if out of bounds
       if (
@@ -255,8 +255,9 @@ export default function Starfield({
       style={{
         height: "100vh",
         width: "100vw",
-        background:
-  "radial-gradient(ellipse at center, #0b0e18 0%, #04050a 100%)",
+        // background: "radial-gradient(ellipse at center, #0b0e18 0%, #04050a 100%)", // darker
+        background: "radial-gradient(ellipse at center, #10131f 0%, #070812 100%)", // slightly lighter
+
 
       }}
     >
